@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Insurance FAQ Assistant | Soelema Pieka</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=1280" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+			/* CV Document Style: Slim Banner with Navigation */
+			#header-slim {
+				padding: 1.5em 0 !important;
+				background-color: #312450;
+				border-bottom: 1px solid rgba(255,255,255,0.1);
+			}
+			#header-slim .inner {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				max-width: 800px; /* Matches CV width */
+				margin: 0 auto;
+			}
+			#header-slim h1 {
+				font-size: 1.2em;
+				margin: 0;
+				letter-spacing: 0.1em;
+			}
+			/* Center content like a document */
+			.inner {
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 0 2em;
+			}
+			/* Content layout */
+			.project-list {
+				padding-top: 2em;
+			}
+			.project-item {
+				border-bottom: 1px solid rgba(255,255,255,0.1);
+				padding: 1.5em 0;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.project-item:last-child {
+				border-bottom: none;
+			}
+			.project-info h3 { margin: 0; font-size: 1.1em; }
+			.project-info p { margin: 0.3em 0 0 0; opacity: 0.7; font-size: 0.85em; }
+		</style>
+	</head>
+	<body>
+		<header id="header-slim">
+			<div class="inner">
+                                <h1>INSURANCE FAQ ASSISTANT1</h1>
+                                <nav>
+					<a href="index.html" class="button small">Main CV</a>
+					<a href="projects.html" class="button small">All Projects</a>
+                                </nav>
+			</div>
+		</header>
+
+
+		<div id="wrapper">
+
+			<section class="wrapper style1">
+				<div class="inner">
+					<p>A dynamic Python-based FAQ Assistant that uses Streamlit and Pandas to navigate structured insurance datasets and provide instant, logic-based responses.</p>
+				</div>
+			</section>
+
+			<section class="wrapper style3">
+				<div class="inner">
+					<h2>INSURANCE FAQ ASSISTANT</h2>
+					<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+<iframe
+  src="https://insurancefaqchatbot-gcbeups7gvpupgc5mfg3wg.streamlit.app/?embed=true"
+  style="height: 600px; width: 90%; max-width: 1000px; border: 2px solid #ffffff33; border-radius: 10px;"allow="clipboard-write">
+</iframe>
+</div>
+					
+				</div>
+			</section>
+
+			<section class="wrapper style2">
+				<div class="inner">
+					<h2>Project Description</h2>
+					
+					<h3>The Problem</h3>
+					<p>Insurance companies manage vast amounts of product data, policy rules, and general procedures across multiple spreadsheets. For customers or employees, finding specific answers manually within these tables is slow and leads to communication inefficiencies.</p>
+					
+					<h3>The Solution</h3>
+					<p>I developed a functional chatbot application that transforms static Excel datasets into an interactive conversation. The system uses a multi-level decision tree to guide users through categories. When a user makes a selection, the script performs a real-time data lookup in a Pandas DataFrame to retrieve the exact answer mapped to that specific product or category.</p>
+				</div>
+			</section>
+
+			<section class="wrapper style3">
+				<div class="inner">
+					<h2>Key Deliverables</h2>
+					<div class="product-box">
+						<ul>
+						<li><strong>Interactive Streamlit Interface:</strong> A clean, button-based chat window that guides users through a multi-level decision tree.</li>
+						<li><strong>Dynamic Knowledge Base:</strong> The system is fully customizable, updating the underlying Excel file automatically updates the chatbot’s responses without any code changes.</li>
+						<li><strong>Automated Data Retrieval:</strong> Uses Pandas to perform real-time filtering of dataframes to match user selections with specific answers.</li>
+						</ul>
+					</div>
+				</div>
+					
+			</section>
+
+
+			<section class="wrapper style1">
+				<div class="inner">
+					<h2>Technical Tools & Future Growth</h2>
+					
+					<h3>Tools Used</h3>
+					<div class="product-box">
+						<ul>
+						<li><strong>Python:</strong> The core programming language used for the logic and state management.</li>
+						<li><strong>Streamlit:</strong> Used to build the web-ready user interface and session handling.</li>
+						<li><strong>Pandas:</strong> Employed for structured data manipulation and Excel integration.</li>
+						<li><strong>Excel:</strong> Serves as the easily maintainable "database" for all FAQ content.</li>
+						</ul>
+					</div>
+
+					
+					<h3>Future Scalability</h3>
+					<div class="product-box">
+						<ul>
+						<li><strong>SQL Migration:</strong> While currently powered by Excel, the logic is designed for a seamless transition to a SQL database to support larger enterprise datasets and multi-user environments.</li>
+						<li><strong>Web Deployment:</strong> Because it is built with Streamlit, the assistant is ready to be hosted on a company website or a secure user portal.</li>
+						</ul>
+					</div>
+			</section>
+
+		</div>
+
+		<footer id="footer" class="wrapper style1-alt">
+			<div class="inner" style="text-align: center;">
+				<ul class="menu">
+					<li>&copy; Soelema Pieka. All rights reserved.</li>
+				</ul>
+			</div>
+		</footer>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>

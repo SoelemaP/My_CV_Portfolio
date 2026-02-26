@@ -268,7 +268,7 @@ h1, h2, h3, h4, h5, h6 {color: #ffffff; font-weight: bold; line-height: 1.5; mar
 
 		.button.icon:before {margin-right: 0.75em;}
 		.button.fit {width: 100%;}
-		.button.small {font-size: 0.4em;}
+		.button.small {font-size: 0.6em;}
 		.button.large {font-size: 0.8em;}
 
 		/* Primary button: White background, Purple text */

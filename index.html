@@ -5,100 +5,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="main.css" />
-		<style>
-			/* ── Header subtitle ────────────────────────────────────────── */
-			#header-slim .subtitle {
-				font-size: 0.75em;
-				color: rgba(255, 255, 255, 0.6);
-				letter-spacing: 0.08em;
-				margin-top: 0.3em;
-			}
-
-			/* ── Skills section ─────────────────────────────────────────── */
-			.skills-grid {
-				display: grid;
-				grid-template-columns: 2fr 1fr;
-				gap: 2em;
-				margin-bottom: 2em;
-			}
-			.skill-group h4 {
-				font-size: 0.7em;
-				font-weight: bold;
-				letter-spacing: 0.12em;
-				text-transform: uppercase;
-				color: #4a5568;
-				margin: 0 0 1em 0;
-				border-bottom: 2px solid #1b3a5c;
-				padding-bottom: 0.4em;
-			}
-			.skill-row { margin-bottom: 0.85em; }
-			.skill-label {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				margin-bottom: 0.3em;
-			}
-			.skill-name { font-size: 0.85em; font-weight: bold; color: #1b2a3a; }
-			.skill-level { font-size: 0.75em; color: #4a5568; }
-			.bar-track {
-				background: #dde3ea;
-				border-radius: 4px;
-				height: 7px;
-				width: 100%;
-			}
-			.bar-fill {
-				height: 7px;
-				border-radius: 4px;
-				background: #1b3a5c;
-			}
-
-			/* ── Language dots ──────────────────────────────────────────── */
-			.lang-row {
-				display: flex;
-				align-items: center;
-				gap: 1em;
-				margin-bottom: 0.85em;
-			}
-			.lang-name { font-size: 0.85em; font-weight: bold; color: #1b2a3a; min-width: 75px; }
-			.lang-dots { display: flex; gap: 5px; }
-			.dot { width: 11px; height: 11px; border-radius: 50%; background: #dde3ea; }
-			.dot.filled { background: #1b3a5c; }
-			.lang-tag { font-size: 0.75em; color: #4a5568; margin-left: 0.5em; }
-
-			/* ── Areas of expertise tags ────────────────────────────────── */
-			.expertise-group h4 {
-				font-size: 0.7em;
-				font-weight: bold;
-				letter-spacing: 0.12em;
-				text-transform: uppercase;
-				color: #4a5568;
-				margin: 0 0 1em 0;
-				border-bottom: 2px solid #1b3a5c;
-				padding-bottom: 0.4em;
-			}
-			.tag-wrap { display: flex; flex-wrap: wrap; gap: 0.5em; }
-			.tag {
-				background: #1b3a5c;
-				color: #ffffff;
-				font-size: 0.75em;
-				font-weight: bold;
-				padding: 0.3em 0.85em;
-				border-radius: 2em;
-				letter-spacing: 0.03em;
-			}
-
-			/* ── Project skill tags ─────────────────────────────────────── */
-			.project-tags { display: flex; flex-wrap: wrap; gap: 0.4em; margin-top: 0.6em; }
-			.project-tag {
-				background: #e8edf4;
-				color: #1b3a5c;
-				font-size: 0.7em;
-				font-weight: bold;
-				padding: 0.2em 0.7em;
-				border-radius: 2em;
-				border: 1px solid #c5d0de;
-			}
-		</style>
 	</head>
 
 	<body>
@@ -120,117 +26,116 @@
 			<!-- Intro -->
 			<section class="wrapper style1">
 				<div class="inner">
-					<p>Data analyst and business intelligence specialist with a strong mathematical foundation. Currently pursuing a master's degree in Mathematics at the University of Calabria, Italy.
-						With experience delivering Power BI solutions, KPI reporting, and data-driven insights for complex data. Expanding toward data science and predictive modeling. Applying graduate-level mathematics to real-world analytical challenges.</p>
+					<p>Data analyst and business intelligence specialist with a strong mathematical foundation. Currently pursuing a master's degree in Mathematics at the University of Calabria, Italy. With experience delivering Power BI solutions, KPI reporting, and data-driven insights for complex data. Expanding toward data science and predictive modeling. Applying graduate-level mathematics to real-world analytical challenges.</p>
 				</div>
 			</section>
 
-	<!-- Skills -->
-<section id="skills" class="wrapper style2">
-    <div class="inner">
-        <h2>Skills</h2>
-        <div class="skills-grid">
+			<!-- Skills -->
+			<section id="skills" class="wrapper style2">
+				<div class="inner">
+					<h2>Skills</h2>
+					<div class="skills-grid">
 
-            <div class="skill-group">
-                <h4>Technical Tools</h4>
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em;">
+						<div class="skill-group">
+							<h4>Technical Tools</h4>
+							<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em;">
 
-                    <div>
-                        <div class="skill-row">
-                            <div class="skill-label">
-                                <span class="skill-name">Power BI</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-label">
-                                <span class="skill-name">SQL</span>
-                                <span class="skill-level">Working knowledge</span>
-                            </div>
-                            <div class="bar-track"><div class="bar-fill" style="width:60%"></div></div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-label">
-                                <span class="skill-name">Python</span>
-                                <span class="skill-level">Working knowledge</span>
-                            </div>
-                            <div class="bar-track"><div class="bar-fill" style="width:60%"></div></div>
-                        </div>
-                    </div>
+								<div>
+									<div class="skill-row">
+										<div class="skill-label">
+											<span class="skill-name">Power BI</span>
+											<span class="skill-level">Advanced</span>
+										</div>
+										<div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
+									</div>
+									<div class="skill-row">
+										<div class="skill-label">
+											<span class="skill-name">SQL</span>
+											<span class="skill-level">Working knowledge</span>
+										</div>
+										<div class="bar-track"><div class="bar-fill" style="width:60%"></div></div>
+									</div>
+									<div class="skill-row">
+										<div class="skill-label">
+											<span class="skill-name">Python</span>
+											<span class="skill-level">Working knowledge</span>
+										</div>
+										<div class="bar-track"><div class="bar-fill" style="width:60%"></div></div>
+									</div>
+								</div>
 
-                    <div>
-                        <div class="skill-row">
-                            <div class="skill-label">
-                                <span class="skill-name">Microsoft Excel</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-label">
-                                <span class="skill-name">Matlab</span>
-                                <span class="skill-level">Beginner</span>
-                            </div>
-                            <div class="bar-track"><div class="bar-fill" style="width:30%"></div></div>
-                        </div>
-                    </div>
+								<div>
+									<div class="skill-row">
+										<div class="skill-label">
+											<span class="skill-name">Microsoft Excel</span>
+											<span class="skill-level">Advanced</span>
+										</div>
+										<div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
+									</div>
+									<div class="skill-row">
+										<div class="skill-label">
+											<span class="skill-name">Matlab</span>
+											<span class="skill-level">Beginner</span>
+										</div>
+										<div class="bar-track"><div class="bar-fill" style="width:30%"></div></div>
+									</div>
+								</div>
 
-                </div>
-            </div>
+							</div>
+						</div>
 
-            <div class="skill-group">
-                <h4>Languages</h4>
-                <div class="lang-row">
-                    <span class="lang-name">Dutch</span>
-                    <div class="lang-dots">
-                        <div class="dot filled"></div>
-                        <div class="dot filled"></div>
-                        <div class="dot filled"></div>
-                        <div class="dot filled"></div>
-                        <div class="dot filled"></div>
-                    </div>
-                    <span class="lang-tag">Native</span>
-                </div>
-                <div class="lang-row">
-                    <span class="lang-name">English</span>
-                    <div class="lang-dots">
-                        <div class="dot filled"></div>
-                        <div class="dot filled"></div>
-                        <div class="dot filled"></div>
-                        <div class="dot filled"></div>
-                        <div class="dot"></div>
-                    </div>
-                    <span class="lang-tag">Fluent</span>
-                </div>
-                <div class="lang-row">
-                    <span class="lang-name">Italian</span>
-                    <div class="lang-dots">
-                        <div class="dot filled"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                    </div>
-                    <span class="lang-tag">Beginner</span>
-                </div>
-            </div>
+						<div class="skill-group">
+							<h4>Languages</h4>
+							<div class="lang-row">
+								<span class="lang-name">Dutch</span>
+								<div class="lang-dots">
+									<div class="dot filled"></div>
+									<div class="dot filled"></div>
+									<div class="dot filled"></div>
+									<div class="dot filled"></div>
+									<div class="dot filled"></div>
+								</div>
+								<span class="lang-tag">Native</span>
+							</div>
+							<div class="lang-row">
+								<span class="lang-name">English</span>
+								<div class="lang-dots">
+									<div class="dot filled"></div>
+									<div class="dot filled"></div>
+									<div class="dot filled"></div>
+									<div class="dot filled"></div>
+									<div class="dot"></div>
+								</div>
+								<span class="lang-tag">Fluent</span>
+							</div>
+							<div class="lang-row">
+								<span class="lang-name">Italian</span>
+								<div class="lang-dots">
+									<div class="dot filled"></div>
+									<div class="dot"></div>
+									<div class="dot"></div>
+									<div class="dot"></div>
+									<div class="dot"></div>
+								</div>
+								<span class="lang-tag">Beginner</span>
+							</div>
+						</div>
 
-        </div>
+					</div>
 
-        <div class="expertise-group">
-            <h4>Areas of Expertise</h4>
-            <div class="tag-wrap">
-                <span class="tag">KPI Reporting</span>
-                <span class="tag">Data ETL</span>
-                <span class="tag">Data Visualization</span>
-                <span class="tag">Business Intelligence</span>
-                <span class="tag">Statistical Analysis</span>
-            </div>
-        </div>
+					<div class="expertise-group">
+						<h4>Areas of Expertise</h4>
+						<div class="tag-wrap">
+							<span class="tag">KPI Reporting</span>
+							<span class="tag">Data ETL</span>
+							<span class="tag">Data Visualization</span>
+							<span class="tag">Business Intelligence</span>
+							<span class="tag">Statistical Analysis</span>
+						</div>
+					</div>
 
-    </div>
-</section>
+				</div>
+			</section>
 
 			<!-- Education -->
 			<section id="education" class="wrapper style1">
@@ -260,8 +165,7 @@
 
 					<h3>Data Analyst (Remote) | De Zorgcoach, NL</h3>
 					<p><em>Nov 2024 – Present</em></p>
-					<p>Responsible for monthly KPI reporting on business performance and revenue, and monitoring employee performance metrics. 
-						Collects and prepares datasets, builds and maintains dashboards, and delivers structured analysis reports to support management decision-making.</p>
+					<p>Responsible for monthly KPI reporting on business performance and revenue, and monitoring employee performance metrics. Collects and prepares datasets, builds and maintains dashboards, and delivers structured analysis reports to support management decision-making.</p>
 					<hr />
 
 					<h3>Senior Officer | Assuria N.V., Suriname</h3>
@@ -322,9 +226,7 @@
 			<section id="contact" class="wrapper style2">
 				<div class="inner">
 					<h2>Get in touch</h2>
-					<p>Currently open to full-time, part-time, and consulting opportunities in data analytics and business intelligence. 
-						Eager to take on new challenges and continue growing, particularly in data science and predictive modeling. 
-						Whether you have a question about my work or want to discuss a potential collaboration, feel free to reach out.</p>
+					<p>Currently open to full-time, part-time, and consulting opportunities in data analytics and business intelligence. Eager to take on new challenges and continue growing, particularly in data science and predictive modeling. Whether you have a question about my work or want to discuss a potential collaboration, feel free to reach out.</p>
 					<ul class="icons" style="display:flex; gap:1em; list-style:none; padding:0; margin-top:1em;">
 						<li>
 							<a href="mailto:soelemapieka@outlook.com" title="Email" style="display:inline-flex; align-items:center; gap:0.4em; text-decoration:none; color:inherit;">

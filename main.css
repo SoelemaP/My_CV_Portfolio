@@ -234,9 +234,9 @@ header p {
 
 /* ── Wrapper (sections) ─────────────────────────────────────────────────── */
 
-.wrapper { position: relative; }
+.wrapper { position: relative; display: block; margin: 0; }
 .wrapper > .inner {
-	padding: 2.5em 3em;
+	padding: 2em 3em;
 	max-width: 100%;
 	width: 100%;
 }
@@ -319,6 +319,7 @@ header p {
 	background: #ffffff;
 	box-shadow: 0 0 40px rgba(0, 0, 0, 0.12);
 	position: relative;
+	overflow: hidden; /* clips sections flush, no gaps */
 }
 
 

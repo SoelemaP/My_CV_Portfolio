@@ -1,7 +1,19 @@
 /*
 	Soelema Pieka | Portfolio CSS
-	Based on Hyperspace by HTML5 UP — stripped to used styles only
+	Color scheme: Navy header/footer, white + light grey-blue sections
 */
+
+/* ── Color variables ────────────────────────────────────────────────────── */
+/*
+	--navy:       #1b3a5c  (header, footer, buttons)
+	--white:      #ffffff  (section A background)
+	--grey-blue:  #f0f4f8  (section B background)
+	--text-dark:  #1b2a3a  (body text in light sections)
+	--text-mid:   #4a5568  (secondary text, dates, labels)
+	--text-light: #ffffff  (text in header/footer)
+	--border:     rgba(27, 58, 92, 0.12) (dividers in light sections)
+*/
+
 
 /* ── Reset ─────────────────────────────────────────────────────────────── */
 
@@ -25,7 +37,7 @@ html { box-sizing: border-box; }
 
 body {
 	line-height: 1.6;
-	background-color: #312450;
+	background-color: #e8edf2; /* page gutters match the grey-blue tone */
 	-webkit-text-size-adjust: none;
 	overflow-x: hidden;
 	-ms-overflow-style: scrollbar;
@@ -39,10 +51,10 @@ table { border-collapse: collapse; border-spacing: 0; }
 mark { background-color: transparent; color: inherit; }
 
 
-/* ── Typography ─────────────────────────────────────────────────────────── */
+/* ── Typography (base — light section defaults) ─────────────────────────── */
 
 body {
-	color: rgba(255, 255, 255, 0.85);
+	color: #1b2a3a;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 13pt;
 	font-weight: normal;
@@ -51,18 +63,18 @@ body {
 
 a {
 	transition: color 0.2s ease, border-bottom-color 0.2s ease;
-	border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
-	color: inherit;
+	border-bottom: dotted 1px rgba(27, 58, 92, 0.3);
+	color: #1b3a5c;
 	text-decoration: none;
 }
-a:hover { border-bottom-color: transparent; color: #ffffff; }
+a:hover { border-bottom-color: transparent; color: #0d2137; }
 
-strong, b { color: #ffffff; font-weight: bold; }
+strong, b { color: #1b2a3a; font-weight: bold; }
 em, i { font-style: italic; }
 p { margin: 0 0 1em 0; }
 
 h1, h2, h3, h4, h5, h6 {
-	color: #ffffff;
+	color: #1b2a3a;
 	font-weight: bold;
 	line-height: 1.5;
 	margin: 0 0 0.5em 0;
@@ -81,9 +93,12 @@ sup { font-size: 0.8em; position: relative; top: -0.5em; }
 
 hr {
 	border: 0;
-	border-bottom: solid 1px rgba(255, 255, 255, 0.15);
+	border-bottom: solid 1px rgba(27, 58, 92, 0.12);
 	margin: 2em 0;
 }
+
+/* Secondary text (dates, labels, subtitles) */
+em { color: #4a5568; }
 
 
 /* ── Buttons ────────────────────────────────────────────────────────────── */
@@ -93,9 +108,9 @@ hr {
 	-webkit-appearance: none;
 	transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 	background-color: transparent;
-	border: solid 1px rgba(255, 255, 255, 0.15) !important;
+	border: solid 1px rgba(27, 58, 92, 0.35) !important;
 	border-radius: 3em;
-	color: #ffffff !important;
+	color: #1b3a5c !important;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 0.6em;
@@ -113,7 +128,7 @@ hr {
 }
 .button:after {
 	transition: opacity 0.2s ease, transform 0.2s ease;
-	background: #ffffff;
+	background: #1b3a5c;
 	border-radius: 3em;
 	content: '';
 	height: 100%; left: 0;
@@ -125,13 +140,47 @@ hr {
 }
 .button.small { font-size: 0.6em; }
 .button.large { font-size: 0.8em; }
-.button.primary { background-color: #ffffff; color: #312450 !important; }
+
+/* Primary button used in header — stays white on navy */
+.button.primary {
+	background-color: #ffffff;
+	color: #1b3a5c !important;
+	border-color: rgba(255, 255, 255, 0.6) !important;
+}
 .button.disabled,
 .button:disabled { cursor: default; opacity: 0.5; pointer-events: none; }
-.button:hover { border-color: rgba(255, 255, 255, 0.55) !important; }
-.button:hover:after { opacity: 0.05; transform: scale(1); }
-.button:hover:active { border-color: #ffffff !important; }
-.button:hover:active:after { opacity: 0.1; }
+.button:hover { border-color: #1b3a5c !important; }
+.button:hover:after { opacity: 0.06; transform: scale(1); }
+.button:hover:active { border-color: #0d2137 !important; }
+.button:hover:active:after { opacity: 0.12; }
+
+/* Buttons inside light sections */
+.wrapper.style1 .button,
+.wrapper.style3 .button {
+	border-color: rgba(27, 58, 92, 0.3) !important;
+	color: #1b3a5c !important;
+}
+.wrapper.style1 .button:hover,
+.wrapper.style3 .button:hover { border-color: #1b3a5c !important; }
+
+/* Buttons inside grey sections */
+.wrapper.style2 .button {
+	border-color: rgba(27, 58, 92, 0.3) !important;
+	color: #1b3a5c !important;
+}
+
+/* Buttons inside header (navy bg) — need white treatment */
+#header-slim .button {
+	border-color: rgba(255, 255, 255, 0.5) !important;
+	color: #ffffff !important;
+}
+#header-slim .button.primary {
+	background-color: #ffffff;
+	color: #1b3a5c !important;
+}
+#header-slim .button:hover {
+	border-color: rgba(255, 255, 255, 0.9) !important;
+}
 
 
 /* ── Lists ──────────────────────────────────────────────────────────────── */
@@ -163,7 +212,7 @@ ul.icons li > a, ul.icons li > span { border: 0; }
 
 ul.menu { list-style: none; padding: 0; }
 ul.menu > li {
-	border-left: solid 1px rgba(255, 255, 255, 0.15);
+	border-left: solid 1px rgba(255, 255, 255, 0.2);
 	display: inline-block;
 	line-height: 1;
 	margin-left: 1.5em;
@@ -177,7 +226,7 @@ ul.menu > li:first-child { border-left: 0; margin: 0; padding-left: 0; }
 section.special, article.special { text-align: center; }
 
 header p {
-	color: rgba(255, 255, 255, 0.55);
+	color: #4a5568;
 	position: relative;
 	margin: 0 0 1.5em 0;
 }
@@ -192,12 +241,73 @@ header p {
 	width: 100%;
 }
 
-.wrapper.style1     { background-color: #2a3a8f; }
-.wrapper.style1-alt { background-color: #1e2d78; }
-.wrapper.style2     { background-color: #3b4dab; }
-.wrapper.style2-alt { background-color: #2a3a8f; }
-.wrapper.style3     { background-color: #4c5fc4; }
-.wrapper.style3-alt { background-color: #3b4dab; }
+/* Section A — white */
+.wrapper.style1,
+.wrapper.style1-alt {
+	background-color: #ffffff;
+}
+
+/* Section B — light grey-blue */
+.wrapper.style2,
+.wrapper.style2-alt {
+	background-color: #f0f4f8;
+}
+
+/* Section C — slightly deeper grey-blue (for variety if needed) */
+.wrapper.style3,
+.wrapper.style3-alt {
+	background-color: #f0f4f8;
+}
+
+/* All section text is dark */
+.wrapper.style1 h2, .wrapper.style1 h3, .wrapper.style1 h4,
+.wrapper.style1-alt h2, .wrapper.style1-alt h3,
+.wrapper.style2 h2, .wrapper.style2 h3, .wrapper.style2 h4,
+.wrapper.style2-alt h2, .wrapper.style2-alt h3,
+.wrapper.style3 h2, .wrapper.style3 h3, .wrapper.style3 h4,
+.wrapper.style3-alt h2, .wrapper.style3-alt h3 {
+	color: #1b2a3a;
+}
+
+.wrapper.style1 p, .wrapper.style1 li,
+.wrapper.style1-alt p, .wrapper.style1-alt li,
+.wrapper.style2 p, .wrapper.style2 li,
+.wrapper.style2-alt p, .wrapper.style2-alt li,
+.wrapper.style3 p, .wrapper.style3 li,
+.wrapper.style3-alt p, .wrapper.style3-alt li {
+	color: #1b2a3a;
+}
+
+.wrapper.style1 em, .wrapper.style1-alt em,
+.wrapper.style2 em, .wrapper.style2-alt em,
+.wrapper.style3 em, .wrapper.style3-alt em {
+	color: #4a5568;
+}
+
+.wrapper.style1 strong, .wrapper.style1-alt strong,
+.wrapper.style2 strong, .wrapper.style2-alt strong,
+.wrapper.style3 strong, .wrapper.style3-alt strong {
+	color: #1b2a3a;
+}
+
+.wrapper.style1 a, .wrapper.style1-alt a,
+.wrapper.style2 a, .wrapper.style2-alt a,
+.wrapper.style3 a, .wrapper.style3-alt a {
+	color: #1b3a5c;
+	border-bottom-color: rgba(27, 58, 92, 0.25);
+}
+.wrapper.style1 a:hover, .wrapper.style1-alt a:hover,
+.wrapper.style2 a:hover, .wrapper.style2-alt a:hover,
+.wrapper.style3 a:hover, .wrapper.style3-alt a:hover {
+	color: #0d2137;
+}
+
+/* Dividers in light sections */
+.wrapper.style1 hr, .wrapper.style1-alt hr,
+.wrapper.style2 hr, .wrapper.style2-alt hr,
+.wrapper.style3 hr, .wrapper.style3-alt hr {
+	border-bottom-color: rgba(27, 58, 92, 0.12);
+}
 
 
 /* ── #wrapper (page container) ──────────────────────────────────────────── */
@@ -206,8 +316,8 @@ header p {
 	margin: 0 auto;
 	max-width: 950px;
 	width: 100%;
-	background: rgba(255, 255, 255, 0.02);
-	box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+	background: #ffffff;
+	box-shadow: 0 0 40px rgba(0, 0, 0, 0.12);
 	position: relative;
 }
 
@@ -216,8 +326,8 @@ header p {
 
 #header-slim {
 	padding: 1.5em 0;
-	background-color: #312450;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	background-color: #1b3a5c;
+	border-bottom: none;
 }
 #header-slim .inner {
 	display: flex;
@@ -231,11 +341,15 @@ header p {
 	font-size: 1.2em;
 	margin: 0;
 	letter-spacing: 0.1em;
+	color: #ffffff;
 }
 
 
 /* ── Footer ─────────────────────────────────────────────────────────────── */
 
+#footer {
+	background-color: #1b3a5c;
+}
 #footer > .inner {
 	margin: 0 auto;
 	max-width: 950px;
@@ -243,7 +357,7 @@ header p {
 }
 #footer > .inner .menu {
 	font-size: 0.8em;
-	color: rgba(255, 255, 255, 0.35);
+	color: rgba(255, 255, 255, 0.45);
 	text-align: center;
 }
 
@@ -251,7 +365,7 @@ header p {
 /* ── Project list ───────────────────────────────────────────────────────── */
 
 .project-item {
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid rgba(27, 58, 92, 0.12);
 	padding: 1.25em 0;
 	display: flex;
 	justify-content: space-between;

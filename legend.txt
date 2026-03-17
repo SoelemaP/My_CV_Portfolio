@@ -1,0 +1,11 @@
+beginner = 30%
+working knowledge = 60%
+proficient = 75%
+Advanced = 85%
+Expert = 95
+
+beginner = 1
+elementary = 2
+intermediate = 3
+fluent = 4
+native = 5

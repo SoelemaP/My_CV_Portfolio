@@ -7,90 +7,85 @@
 		<link rel="stylesheet" href="main.css" />
 	</head>
 	<body>
+
 		<header id="header-slim">
 			<div class="inner">
-                                <h1>Insurance FAQ Assistant</h1>
-                                <nav>
-					<a href="index.html" class="button small">Main CV</a>
+				<div>
+					<h1>SOELEMA REMENDA PIEKA</h1>
+					<p class="subtitle">BSc Mathematics &nbsp;·&nbsp; MSc student</p>
+				</div>
+				<nav>
+					<a href="index.html" class="button small">Back to CV</a>
 					<a href="projects.html" class="button small">All Projects</a>
-                                </nav>
+				</nav>
 			</div>
 		</header>
 
-
 		<div id="wrapper">
 
+			<!-- Intro -->
 			<section class="wrapper style1">
-				<div class="inner">
-					<p>A dynamic Python-based FAQ Assistant that uses Streamlit and Pandas to navigate structured insurance datasets and provide instant, logic-based responses.</p>
-				</div>
-			</section>
-
-			<section class="wrapper style3">
 				<div class="inner">
 					<h2>Insurance FAQ Assistant</h2>
-					<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-<iframe
-  src="https://insurancefaqchatbot-gcbeups7gvpupgc5mfg3wg.streamlit.app/?embed=true"
-  width="600" height="373.5" frameborder="0" allowFullScreen="true">
-</iframe>
-</div>
-					
+					<p>A Python-based FAQ assistant that uses Streamlit and Pandas to navigate structured insurance datasets and provide instant, logic-based responses.</p>
+					<div class="project-tags" style="margin-top: 0.5em;">
+						<span class="project-tag">Python</span>
+						<span class="project-tag">Streamlit</span>
+						<span class="project-tag">Pandas</span>
+						<span class="project-tag">Excel</span>
+					</div>
 				</div>
 			</section>
 
+			<!-- Live demo -->
 			<section class="wrapper style2">
 				<div class="inner">
-					<h2>Project Description</h2>
-					
-					<h3>The Problem</h3>
-					<p>Insurance companies manage vast amounts of product data, policy rules, and general procedures across multiple spreadsheets. For customers or employees, finding specific answers manually within these tables is slow and leads to communication inefficiencies.</p>
-					
-					<h3>The Solution</h3>
-					<p>I developed a functional chatbot application that transforms static Excel datasets into an interactive conversation. The system uses a multi-level decision tree to guide users through categories. When a user makes a selection, the script performs a real-time data lookup in a Pandas DataFrame to retrieve the exact answer mapped to that specific product or category.</p>
-				</div>
-			</section>
-
-			<section class="wrapper style3">
-				<div class="inner">
-					<h2>Key Deliverables</h2>
-					<div class="product-box">
-						<ul>
-						<li><strong>Interactive Streamlit Interface:</strong> A clean, button-based chat window that guides users through a multi-level decision tree.</li>
-						<li><strong>Dynamic Knowledge Base:</strong> The system is fully customizable, updating the underlying Excel file automatically updates the chatbot’s responses without any code changes.</li>
-						<li><strong>Automated Data Retrieval:</strong> Uses Pandas to perform real-time filtering of dataframes to match user selections with specific answers.</li>
-						</ul>
+					<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+						<iframe
+							src="https://insurancefaqchatbot-gcbeups7gvpupgc5mfg3wg.streamlit.app/?embed=true"
+							width="100%" height="500" frameborder="0" allowFullScreen="true">
+						</iframe>
 					</div>
 				</div>
-					
 			</section>
 
-
+			<!-- Project description -->
 			<section class="wrapper style1">
 				<div class="inner">
-					<h2>Technical Tools & Future Growth</h2>
-					
-					<h3>Tools Used</h3>
-					<div class="product-box">
-						<ul>
-						<li><strong>Python:</strong> The core programming language used for the logic and state management.</li>
-						<li><strong>Streamlit:</strong> Used to build the web-ready user interface and session handling.</li>
-						<li><strong>Pandas:</strong> Employed for structured data manipulation and Excel integration.</li>
-						<li><strong>Excel:</strong> Serves as the easily maintainable "database" for all FAQ content.</li>
-						</ul>
-					</div>
+					<h2>Project Description</h2>
 
-					
-					<h3>Future Scalability</h3>
-					<div class="product-box">
-						<ul>
-						<li><strong>SQL Migration:</strong> While currently powered by Excel, the logic is designed for a seamless transition to a SQL database to support larger enterprise datasets and multi-user environments.</li>
-						<li><strong>Web Deployment:</strong> Because it is built with Streamlit, the assistant is ready to be hosted on a company website or a secure user portal.</li>
-						</ul>
-					</div>
+					<h3>The Problem</h3>
+					<p>Insurance companies manage large amounts of product data, policy rules, and procedures across multiple spreadsheets. Finding specific answers manually is slow and leads to communication inefficiencies for both customers and employees.</p>
+
+					<h3>The Solution</h3>
+					<p>A functional chatbot application that transforms static Excel datasets into an interactive conversation. The system uses a multi-level decision tree to guide users through categories, performing real-time data lookups in a Pandas DataFrame to retrieve the exact answer for each selection.</p>
+				</div>
 			</section>
 
-		</div>
+			<!-- Key deliverables -->
+			<section class="wrapper style2">
+				<div class="inner">
+					<h2>Key Deliverables</h2>
+					<ul>
+						<li><strong>Interactive Streamlit interface</strong>; a clean, button-based chat window guiding users through a multi-level decision tree.</li>
+						<li><strong>Dynamic knowledge base</strong>; fully customizable via the underlying Excel file, with no code changes required when content is updated.</li>
+						<li><strong>Automated data retrieval</strong>; real-time DataFrame filtering to match user selections with precise answers.</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- Future growth -->
+			<section class="wrapper style1">
+				<div class="inner">
+					<h2>Future Scalability</h2>
+					<ul>
+						<li><strong>SQL migration</strong>; the logic is designed for a seamless transition to a SQL database to support larger enterprise datasets and multi-user environments.</li>
+						<li><strong>Web deployment</strong>; built with Streamlit, the assistant is ready to be hosted on a company website or secure user portal.</li>
+					</ul>
+				</div>
+			</section>
+
+		</div><!-- end #wrapper -->
 
 		<footer id="footer">
 			<div class="inner" style="text-align: center;">
@@ -100,9 +95,5 @@
 			</div>
 		</footer>
 
-
 	</body>
-
 </html>
-
-

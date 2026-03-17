@@ -5,47 +5,73 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="main.css" />
+		<style>
+			.project-tags { display: flex; flex-wrap: wrap; gap: 0.4em; margin-top: 0.6em; }
+			.project-tag {
+				background: #e8edf4;
+				color: #1b3a5c;
+				font-size: 0.7em;
+				font-weight: bold;
+				padding: 0.2em 0.7em;
+				border-radius: 2em;
+				border: 1px solid #c5d0de;
+			}
+		</style>
 	</head>
 	<body>
 
 		<header id="header-slim">
 			<div class="inner">
-				<h1>PROJECT PORTFOLIO</h1>
+				<div>
+					<h1>SOELEMA REMENDA PIEKA</h1>
+					<p class="subtitle">BSc Mathematics &nbsp;·&nbsp; MSc candidate, University of Calabria</p>
+				</div>
 				<nav>
-					<a href="index.html" class="button small">Main CV</a>
+					<a href="index.html" class="button small">Back to CV</a>
 				</nav>
 			</div>
 		</header>
 
-<div id="wrapper">
+		<div id="wrapper">
 
-		<section class="wrapper style2">
-			<div class="inner">
-				<div class="project-list">
+			<section class="wrapper style1">
+				<div class="inner">
+					<h2>Projects</h2>
+					<div class="project-list">
 
-					<div class="project-item">
-						<div class="project-info">
-							<h3>Insurance FAQ Assistant</h3>
-							<p>A rule-based FAQ assistant built with structured logic to provide instant, automated responses to specific user inquiries.</p>
+						<div class="project-item">
+							<div>
+								<h3>Insurance FAQ Assistant</h3>
+								<p>A rule-based FAQ assistant that transforms static Excel datasets into an interactive conversation, using a multi-level decision tree to guide users to instant, accurate answers.</p>
+								<div class="project-tags">
+									<span class="project-tag">Python</span>
+									<span class="project-tag">Streamlit</span>
+									<span class="project-tag">Pandas</span>
+									<span class="project-tag">Excel</span>
+								</div>
+							</div>
+							<a href="project_FAQ_chatbot.html" class="button small">Details</a>
 						</div>
-						<a href="project_FAQ_chatbot.html" class="button small">Details</a>
-					</div>
 
-					<div class="project-item">
-						<div class="project-info">
-							<h3>Customer Purchase Behavior & Lead Generation Dashboard</h3>
-							<p>An interactive Power BI case study that analyzes customer demographics and lifestyle triggers to identify high-value sales leads through data-driven segmentation.</p>
+						<div class="project-item">
+							<div>
+								<h3>Customer Purchase Behavior & Lead Generation Dashboard</h3>
+								<p>An end-to-end Power BI case study identifying high-value sales leads through demographic segmentation, culminating in a targeted Top 20 Lead List.</p>
+								<div class="project-tags">
+									<span class="project-tag">Power BI</span>
+									<span class="project-tag">DAX</span>
+									<span class="project-tag">Excel</span>
+									<span class="project-tag">Data Segmentation</span>
+								</div>
+							</div>
+							<a href="project_powerbi_bike.html" class="button small">Details</a>
 						</div>
-						<a href="project_powerbi_bike.html" class="button small">Details</a>
+
 					</div>
-
-
 				</div>
+			</section>
 
-			</div>
-		</section>
-
-              </div>
+		</div><!-- end #wrapper -->
 
 		<footer id="footer">
 			<div class="inner" style="text-align: center;">
@@ -56,6 +82,4 @@
 		</footer>
 
 	</body>
-
 </html>
-

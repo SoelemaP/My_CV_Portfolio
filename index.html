@@ -1,17 +1,114 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Soelema Pieka | Data Analyst Portfolio</title>
+		<title>Soelema Pieka | Data & BI Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="main.css" />
+		<style>
+			/* ── Header subtitle ────────────────────────────────────────── */
+			#header-slim .subtitle {
+				font-size: 0.75em;
+				color: rgba(255, 255, 255, 0.6);
+				letter-spacing: 0.08em;
+				margin-top: 0.3em;
+			}
+
+			/* ── Skills section ─────────────────────────────────────────── */
+			.skills-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 2em;
+				margin-bottom: 2em;
+			}
+			.skill-group h4 {
+				font-size: 0.7em;
+				font-weight: bold;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: #4a5568;
+				margin: 0 0 1em 0;
+				border-bottom: 2px solid #1b3a5c;
+				padding-bottom: 0.4em;
+			}
+			.skill-row { margin-bottom: 0.85em; }
+			.skill-label {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 0.3em;
+			}
+			.skill-name { font-size: 0.85em; font-weight: bold; color: #1b2a3a; }
+			.skill-level { font-size: 0.75em; color: #4a5568; }
+			.bar-track {
+				background: #dde3ea;
+				border-radius: 4px;
+				height: 7px;
+				width: 100%;
+			}
+			.bar-fill {
+				height: 7px;
+				border-radius: 4px;
+				background: #1b3a5c;
+			}
+
+			/* ── Language dots ──────────────────────────────────────────── */
+			.lang-row {
+				display: flex;
+				align-items: center;
+				gap: 1em;
+				margin-bottom: 0.85em;
+			}
+			.lang-name { font-size: 0.85em; font-weight: bold; color: #1b2a3a; min-width: 75px; }
+			.lang-dots { display: flex; gap: 5px; }
+			.dot { width: 11px; height: 11px; border-radius: 50%; background: #dde3ea; }
+			.dot.filled { background: #1b3a5c; }
+			.lang-tag { font-size: 0.75em; color: #4a5568; margin-left: 0.5em; }
+
+			/* ── Areas of expertise tags ────────────────────────────────── */
+			.expertise-group h4 {
+				font-size: 0.7em;
+				font-weight: bold;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: #4a5568;
+				margin: 0 0 1em 0;
+				border-bottom: 2px solid #1b3a5c;
+				padding-bottom: 0.4em;
+			}
+			.tag-wrap { display: flex; flex-wrap: wrap; gap: 0.5em; }
+			.tag {
+				background: #1b3a5c;
+				color: #ffffff;
+				font-size: 0.75em;
+				font-weight: bold;
+				padding: 0.3em 0.85em;
+				border-radius: 2em;
+				letter-spacing: 0.03em;
+			}
+
+			/* ── Project skill tags ─────────────────────────────────────── */
+			.project-tags { display: flex; flex-wrap: wrap; gap: 0.4em; margin-top: 0.6em; }
+			.project-tag {
+				background: #e8edf4;
+				color: #1b3a5c;
+				font-size: 0.7em;
+				font-weight: bold;
+				padding: 0.2em 0.7em;
+				border-radius: 2em;
+				border: 1px solid #c5d0de;
+			}
+		</style>
 	</head>
 
 	<body>
 
 		<header id="header-slim">
 			<div class="inner">
-				<h1>SOELEMA REMENDA PIEKA</h1>
+				<div>
+					<h1>SOELEMA REMENDA PIEKA</h1>
+					<p class="subtitle">BSc Mathematics &nbsp;·&nbsp; MSc student</p>
+				</div>
 				<nav>
 					<a href="downloads/Soelema_Pieka_cv.pdf" download="Soelema_Pieka_cv.pdf" class="button primary">Download CV</a>
 				</nav>
@@ -20,64 +117,191 @@
 
 		<div id="wrapper">
 
+			<!-- Intro -->
 			<section class="wrapper style1">
 				<div class="inner">
-					<p>A mathematics-driven problem solver specializing in data analytics. Aspiring data scientist currently pursuing an MSc in Mathematics at the University of Calabria.</p>
+					<p>Data analyst and business intelligence specialist with a strong mathematical foundation. Currently pursuing a master's degree in Mathematics at the University of Calabria, Italy.
+						With experience delivering Power BI solutions, KPI reporting, and data-driven insights for complex data. Expanding toward data science and predictive modeling. Applying graduate-level mathematics to real-world analytical challenges.</p>
 				</div>
 			</section>
 
-			<section id="education" class="wrapper style2">
+			<!-- Skills -->
+			<section id="skills" class="wrapper style2">
+				<div class="inner">
+					<h2>Skills</h2>
+
+					<div class="skills-grid">
+
+						<div class="skill-group">
+							<h4>Technical Tools</h4>
+							<div class="skill-row">
+								<div class="skill-label">
+									<span class="skill-name">Power BI</span>
+									<span class="skill-level">Advanced</span>
+								</div>
+								<div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
+							</div>
+							<div class="skill-row">
+								<div class="skill-label">
+									<span class="skill-name">Microsoft Excel</span>
+									<span class="skill-level">Advanced</span>
+								</div>
+								<div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
+							</div>
+							<div class="skill-row">
+								<div class="skill-label">
+									<span class="skill-name">SQL</span>
+									<span class="skill-level">Working knowledge</span>
+								</div>
+								<div class="bar-track"><div class="bar-fill" style="width:60%"></div></div>
+							</div>
+							<div class="skill-row">
+								<div class="skill-label">
+									<span class="skill-name">Python</span>
+									<span class="skill-level">Working knowledge</span>
+								</div>
+								<div class="bar-track"><div class="bar-fill" style="width:60%"></div></div>
+							</div>
+							<div class="skill-row">
+								<div class="skill-label">
+									<span class="skill-name">Matlab</span>
+									<span class="skill-level">Beginner</span>
+								</div>
+								<div class="bar-track"><div class="bar-fill" style="width:30%"></div></div>
+							</div>
+						</div>
+
+						<div class="skill-group">
+							<h4>Languages</h4>
+							<div class="lang-row">
+								<span class="lang-name">Dutch</span>
+								<div class="lang-dots">
+									<div class="dot filled"></div>
+									<div class="dot filled"></div>
+									<div class="dot filled"></div>
+									<div class="dot filled"></div>
+									<div class="dot filled"></div>
+								</div>
+								<span class="lang-tag">Native</span>
+							</div>
+							<div class="lang-row">
+								<span class="lang-name">English</span>
+								<div class="lang-dots">
+									<div class="dot filled"></div>
+									<div class="dot filled"></div>
+									<div class="dot filled"></div>
+									<div class="dot filled"></div>
+									<div class="dot"></div>
+								</div>
+								<span class="lang-tag">Fluent</span>
+							</div>
+							<div class="lang-row">
+								<span class="lang-name">Italian</span>
+								<div class="lang-dots">
+									<div class="dot filled"></div>
+									<div class="dot"></div>
+									<div class="dot"></div>
+									<div class="dot"></div>
+									<div class="dot"></div>
+								</div>
+								<span class="lang-tag">Beginner</span>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="expertise-group">
+						<h4>Areas of Expertise</h4>
+						<div class="tag-wrap">
+							<span class="tag">KPI Reporting</span>
+							<span class="tag">Data Visualization</span>
+							<span class="tag">Dashboard Design</span>
+							<span class="tag">Business Intelligence</span>
+							<span class="tag">Statistical Analysis</span>
+							<span class="tag">Data Preparation</span>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<!-- Education -->
+			<section id="education" class="wrapper style1">
 				<div class="inner">
 					<h2>Education</h2>
 					<h3>Master of Science in Mathematics</h3>
-					<p><strong>University of Calabria, IT</strong> | <em>Sep 2024 - Current</em><br/>
-					Field of study: Natural sciences, mathematics and statistics.</p>
+					<p><strong>University of Calabria, IT</strong> | <em>Sep 2024 – Present</em><br/>
+					Natural sciences, mathematics and statistics.</p>
 					<hr />
 					<h3>Bachelor of Science in Mathematics</h3>
-					<p><strong>Anton de Kom University, SR</strong> | <em>Dec 2021</em><br/>
-					Thesis: Modeling the COVID-19 outbreak in Suriname: A comparison between a Stochastic model and a system of Differential equations.</p>
+					<p><strong>Anton de Kom University, SR</strong> | <em>Oct 2017 – Dec 2021</em><br/>
+					Thesis: Modeling the COVID-19 outbreak in Suriname: a comparison between a stochastic model and a system of differential equations.</p>
 					<hr />
 					<h3>Data Analysis Industry Training</h3>
-					<p><strong>Brainnest, DE</strong> | <em>Apr 2022</em><br/>
-					Focus: Normal distribution, ANOVA, correlation coefficients, and analyses with SPSS.</p>
+					<p><strong>Brainnest, DE</strong> | <em>Mar – Apr 2022</em><br/>
+					Normal distribution, ANOVA, correlation coefficients, and statistical analysis with SPSS.</p>
+					<hr />
+					<h3>Programming for Everybody — Getting Started with Python</h3>
+					<p><strong>EDX / University of Michigan</strong> | <em>Jan – Feb 2024</em></p>
 				</div>
 			</section>
 
-			<section id="experience" class="wrapper style1">
+			<!-- Work Experience -->
+			<section id="experience" class="wrapper style2">
 				<div class="inner">
 					<h2>Work Experience</h2>
+
 					<h3>Data Analyst (Remote) | De Zorgcoach, NL</h3>
-					<p><em>Nov 2024 - Present</em></p>
-					<p>Collecting and cleaning up data, managing dashboards, and creating analysis reports.</p>
+					<p><em>Nov 2024 – Present</em></p>
+					<p>Responsible for monthly KPI reporting on business performance and revenue, and monitoring employee performance metrics. 
+						Collects and prepares datasets, builds and maintains dashboards, and delivers structured analysis reports to support management decision-making.</p>
 					<hr />
+
 					<h3>Senior Officer | Assuria N.V., Suriname</h3>
-					<p><em>May 2022 - Aug 2024</em></p>
-					<p>Analyzed monthly KPI reports, handled revenue generation tracking, and provided expert guidance on insurance activities.</p>
+					<p><em>May 2022 – Aug 2024</em></p>
+					<p>Managed life insurance product portfolios for company clients within the life insurance department. Responsibilities included client consultations, relationship management, and providing tailored insurance solutions. Produced monthly KPI reports covering department performance, revenue, and claims amount analysis.</p>
 					<hr />
+
 					<h3>Data Analyst | Consulytic N.V., Suriname</h3>
-					<p><em>May 2021 - May 2022</em></p>
-					<p>Designed interactive Power BI dashboards and performed in-depth analysis to identify patterns and trends.</p>
+					<p><em>May 2021 – May 2022</em></p>
+					<p>Designed and delivered Power BI dashboard solutions for multiple clients across various sectors. Managed the full dashboard lifecycle from initial design through to maintenance and optimization. Provided end-user coaching and subject matter expertise to client teams.</p>
 				</div>
 			</section>
 
-			<section id="projects" class="wrapper style2">
+			<!-- Projects -->
+			<section id="projects" class="wrapper style1">
 				<div class="inner">
 					<h2>Projects</h2>
 					<div class="project-list">
+
 						<div class="project-item">
 							<div>
 								<h3>Insurance FAQ Assistant</h3>
-								<p>A rule-based FAQ assistant built with structured logic to provide instant, automated responses to specific user inquiries.</p>
+								<p>A rule-based FAQ assistant that transforms static Excel datasets into an interactive conversation, using a multi-level decision tree to guide users to instant, accurate answers.</p>
+								<div class="project-tags">
+									<span class="project-tag">Python</span>
+									<span class="project-tag">Streamlit</span>
+									<span class="project-tag">Pandas</span>
+									<span class="project-tag">Excel</span>
+								</div>
 							</div>
 							<a href="project_FAQ_chatbot.html" class="button small">Details</a>
 						</div>
+
 						<div class="project-item">
 							<div>
 								<h3>Customer Purchase Behavior & Lead Generation Dashboard</h3>
-								<p>An interactive Power BI case study that analyzes customer demographics and lifestyle triggers to identify high-value sales leads through data-driven segmentation.</p>
+								<p>An end-to-end Power BI case study identifying high-value sales leads through demographic segmentation, culminating in a targeted Top 20 Lead List.</p>
+								<div class="project-tags">
+									<span class="project-tag">Power BI</span>
+									<span class="project-tag">DAX</span>
+									<span class="project-tag">Excel</span>
+									<span class="project-tag">Data Segmentation</span>
+								</div>
 							</div>
 							<a href="project_powerbi_bike.html" class="button small">Details</a>
 						</div>
+
 					</div>
 					<div style="text-align: center; margin-top: 2em;">
 						<ul class="actions" style="justify-content: center;">
@@ -87,12 +311,13 @@
 				</div>
 			</section>
 
-			<section id="contact" class="wrapper style1">
+			<!-- Contact -->
+			<section id="contact" class="wrapper style2">
 				<div class="inner">
 					<h2>Get in touch</h2>
-					<p>I am currently <strong>open to new opportunities</strong> and would love to hear from you.
-					Whether you have a specific question about my data projects or just want to discuss a potential
-					collaboration, please feel free to contact me.</p>
+					<p>Currently open to full-time, part-time, and consulting opportunities in data analytics and business intelligence. 
+						Eager to take on new challenges and continue growing, particularly in data science and predictive modeling. 
+						Whether you have a question about my work or want to discuss a potential collaboration, feel free to reach out.</p>
 					<ul class="icons" style="display:flex; gap:1em; list-style:none; padding:0; margin-top:1em;">
 						<li>
 							<a href="mailto:soelemapieka@outlook.com" title="Email" style="display:inline-flex; align-items:center; gap:0.4em; text-decoration:none; color:inherit;">

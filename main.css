@@ -37,7 +37,7 @@ html { box-sizing: border-box; }
 
 body {
 	line-height: 1.6;
-	background-color: #e8edf2; /* page gutters match the grey-blue tone */
+	background-color: #e8edf2;
 	-webkit-text-size-adjust: none;
 	overflow-x: hidden;
 	-ms-overflow-style: scrollbar;
@@ -51,7 +51,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 mark { background-color: transparent; color: inherit; }
 
 
-/* ── Typography (base — light section defaults) ─────────────────────────── */
+/* ── Typography ─────────────────────────────────────────────────────────── */
 
 body {
 	color: #1b2a3a;
@@ -97,7 +97,6 @@ hr {
 	margin: 2em 0;
 }
 
-/* Secondary text (dates, labels, subtitles) */
 em { color: #4a5568; }
 
 
@@ -141,7 +140,6 @@ em { color: #4a5568; }
 .button.small { font-size: 0.6em; }
 .button.large { font-size: 0.8em; }
 
-/* Primary button used in header — stays white on navy */
 .button.primary {
 	background-color: #ffffff;
 	color: #1b3a5c !important;
@@ -154,22 +152,16 @@ em { color: #4a5568; }
 .button:hover:active { border-color: #0d2137 !important; }
 .button:hover:active:after { opacity: 0.12; }
 
-/* Buttons inside light sections */
 .wrapper.style1 .button,
+.wrapper.style2 .button,
 .wrapper.style3 .button {
 	border-color: rgba(27, 58, 92, 0.3) !important;
 	color: #1b3a5c !important;
 }
 .wrapper.style1 .button:hover,
+.wrapper.style2 .button:hover,
 .wrapper.style3 .button:hover { border-color: #1b3a5c !important; }
 
-/* Buttons inside grey sections */
-.wrapper.style2 .button {
-	border-color: rgba(27, 58, 92, 0.3) !important;
-	color: #1b3a5c !important;
-}
-
-/* Buttons inside header (navy bg) — need white treatment */
 #header-slim .button {
 	border-color: rgba(255, 255, 255, 0.5) !important;
 	color: #ffffff !important;
@@ -241,54 +233,35 @@ header p {
 	width: 100%;
 }
 
-/* Section A — white */
 .wrapper.style1,
-.wrapper.style1-alt {
-	background-color: #ffffff;
-}
+.wrapper.style1-alt { background-color: #ffffff; }
 
-/* Section B — light grey-blue */
 .wrapper.style2,
-.wrapper.style2-alt {
-	background-color: #f0f4f8;
-}
-
-/* Section C — slightly deeper grey-blue (for variety if needed) */
+.wrapper.style2-alt,
 .wrapper.style3,
-.wrapper.style3-alt {
-	background-color: #f0f4f8;
-}
+.wrapper.style3-alt { background-color: #f0f4f8; }
 
-/* All section text is dark */
 .wrapper.style1 h2, .wrapper.style1 h3, .wrapper.style1 h4,
 .wrapper.style1-alt h2, .wrapper.style1-alt h3,
 .wrapper.style2 h2, .wrapper.style2 h3, .wrapper.style2 h4,
 .wrapper.style2-alt h2, .wrapper.style2-alt h3,
 .wrapper.style3 h2, .wrapper.style3 h3, .wrapper.style3 h4,
-.wrapper.style3-alt h2, .wrapper.style3-alt h3 {
-	color: #1b2a3a;
-}
+.wrapper.style3-alt h2, .wrapper.style3-alt h3 { color: #1b2a3a; }
 
 .wrapper.style1 p, .wrapper.style1 li,
 .wrapper.style1-alt p, .wrapper.style1-alt li,
 .wrapper.style2 p, .wrapper.style2 li,
 .wrapper.style2-alt p, .wrapper.style2-alt li,
 .wrapper.style3 p, .wrapper.style3 li,
-.wrapper.style3-alt p, .wrapper.style3-alt li {
-	color: #1b2a3a;
-}
+.wrapper.style3-alt p, .wrapper.style3-alt li { color: #1b2a3a; }
 
 .wrapper.style1 em, .wrapper.style1-alt em,
 .wrapper.style2 em, .wrapper.style2-alt em,
-.wrapper.style3 em, .wrapper.style3-alt em {
-	color: #4a5568;
-}
+.wrapper.style3 em, .wrapper.style3-alt em { color: #4a5568; }
 
 .wrapper.style1 strong, .wrapper.style1-alt strong,
 .wrapper.style2 strong, .wrapper.style2-alt strong,
-.wrapper.style3 strong, .wrapper.style3-alt strong {
-	color: #1b2a3a;
-}
+.wrapper.style3 strong, .wrapper.style3-alt strong { color: #1b2a3a; }
 
 .wrapper.style1 a, .wrapper.style1-alt a,
 .wrapper.style2 a, .wrapper.style2-alt a,
@@ -298,11 +271,8 @@ header p {
 }
 .wrapper.style1 a:hover, .wrapper.style1-alt a:hover,
 .wrapper.style2 a:hover, .wrapper.style2-alt a:hover,
-.wrapper.style3 a:hover, .wrapper.style3-alt a:hover {
-	color: #0d2137;
-}
+.wrapper.style3 a:hover, .wrapper.style3-alt a:hover { color: #0d2137; }
 
-/* Dividers in light sections */
 .wrapper.style1 hr, .wrapper.style1-alt hr,
 .wrapper.style2 hr, .wrapper.style2-alt hr,
 .wrapper.style3 hr, .wrapper.style3-alt hr {
@@ -319,11 +289,11 @@ header p {
 	background: #ffffff;
 	box-shadow: 0 0 40px rgba(0, 0, 0, 0.12);
 	position: relative;
-	overflow: hidden; /* clips sections flush, no gaps */
+	overflow: hidden;
 }
 
 
-/* ── Header (slim nav bar) ───────────────────────────────────────────────── */
+/* ── Header ─────────────────────────────────────────────────────────────── */
 
 #header-slim {
 	padding: 1.5em 0;
@@ -344,13 +314,17 @@ header p {
 	letter-spacing: 0.1em;
 	color: #ffffff;
 }
+#header-slim .subtitle {
+	font-size: 0.75em;
+	color: rgba(255, 255, 255, 0.85);
+	letter-spacing: 0.08em;
+	margin-top: 0.3em;
+}
 
 
 /* ── Footer ─────────────────────────────────────────────────────────────── */
 
-#footer {
-	background-color: #1b3a5c;
-}
+#footer { background-color: #1b3a5c; }
 #footer > .inner {
 	margin: 0 auto;
 	max-width: 950px;
@@ -374,3 +348,79 @@ header p {
 	gap: 1.5em;
 }
 .project-item:last-child { border-bottom: none; }
+
+.project-item h3 { margin: 0; }
+.project-item p { margin: 0.3em 0 0 0; }
+
+
+/* ── Project tags ───────────────────────────────────────────────────────── */
+
+.project-tags { display: flex; flex-wrap: wrap; gap: 0.4em; margin-top: 0.6em; }
+.project-tag {
+	background: #e8edf4;
+	color: #1b3a5c;
+	font-size: 0.7em;
+	font-weight: bold;
+	padding: 0.2em 0.7em;
+	border-radius: 2em;
+	border: 1px solid #c5d0de;
+}
+
+
+/* ── Skills ─────────────────────────────────────────────────────────────── */
+
+.skills-grid {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 2em;
+	margin-bottom: 2em;
+}
+.skill-group h4 {
+	font-size: 0.7em;
+	font-weight: bold;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: #4a5568;
+	margin: 0 0 1em 0;
+	border-bottom: 2px solid #1b3a5c;
+	padding-bottom: 0.4em;
+}
+.skill-row { margin-bottom: 0.85em; }
+.skill-label {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0.3em;
+}
+.skill-name { font-size: 0.85em; font-weight: bold; color: #1b2a3a; }
+.skill-level { font-size: 0.75em; color: #4a5568; }
+.bar-track { background: #dde3ea; border-radius: 4px; height: 7px; width: 100%; }
+.bar-fill { height: 7px; border-radius: 4px; background: #1b3a5c; }
+
+.lang-row { display: flex; align-items: center; gap: 1em; margin-bottom: 0.85em; }
+.lang-name { font-size: 0.85em; font-weight: bold; color: #1b2a3a; min-width: 75px; }
+.lang-dots { display: flex; gap: 5px; }
+.dot { width: 11px; height: 11px; border-radius: 50%; background: #dde3ea; }
+.dot.filled { background: #1b3a5c; }
+.lang-tag { font-size: 0.75em; color: #4a5568; margin-left: 0.5em; }
+
+.expertise-group h4 {
+	font-size: 0.7em;
+	font-weight: bold;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: #4a5568;
+	margin: 0 0 1em 0;
+	border-bottom: 2px solid #1b3a5c;
+	padding-bottom: 0.4em;
+}
+.tag-wrap { display: flex; flex-wrap: wrap; gap: 0.5em; }
+.tag {
+	background: #1b3a5c;
+	color: #ffffff;
+	font-size: 0.75em;
+	font-weight: bold;
+	padding: 0.3em 0.85em;
+	border-radius: 2em;
+	letter-spacing: 0.03em;
+}

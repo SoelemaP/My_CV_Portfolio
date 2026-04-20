@@ -1,0 +1,407 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Logistics Operations Analytics Suite | Soelema Pieka</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="main.css" />
+		<style>
+			/* ── Data tables ──────────────────────────────────────────── */
+			.data-table {
+				width: 100%;
+				border-collapse: collapse;
+				font-size: 0.8em;
+				margin-top: 0.75em;
+				margin-bottom: 0.5em;
+			}
+			.data-table th {
+				background: #1b3a5c;
+				color: #ffffff;
+				padding: 0.5em 0.85em;
+				text-align: left;
+				font-weight: bold;
+				font-size: 0.9em;
+			}
+			.data-table td {
+				padding: 0.4em 0.85em;
+				border-bottom: 1px solid rgba(27, 58, 92, 0.1);
+				color: #1b2a3a;
+			}
+			.data-table tr:nth-child(even) td {
+				background: rgba(27, 58, 92, 0.04);
+			}
+
+			/* ── Observation callout ──────────────────────────────────── */
+			.observation {
+				border-left: 3px solid #1b3a5c;
+				padding: 0.6em 1em;
+				margin-top: 0.75em;
+				background: rgba(27, 58, 92, 0.04);
+				border-radius: 0 4px 4px 0;
+				font-size: 0.85em;
+				color: #1b2a3a;
+			}
+
+			/* ── SQL code block ───────────────────────────────────────── */
+			.sql-block {
+				background: #f8f9fb;
+				border: 1px solid rgba(27, 58, 92, 0.15);
+				border-radius: 4px;
+				padding: 1em 1.25em;
+				font-family: "Courier New", monospace;
+				font-size: 0.75em;
+				color: #1b2a3a;
+				overflow-x: auto;
+				margin-top: 0.75em;
+				line-height: 1.6;
+				white-space: pre;
+			}
+
+			/* ── Mart cards ───────────────────────────────────────────── */
+			.mart-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 1.5em;
+				margin-top: 1em;
+			}
+			.mart-card {
+				border: 1px solid rgba(27, 58, 92, 0.15);
+				border-radius: 6px;
+				padding: 1.25em;
+			}
+			.mart-card h4 {
+				font-size: 0.78em;
+				font-weight: bold;
+				color: #1b3a5c;
+				margin: 0 0 0.5em 0;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				border-bottom: 2px solid #1b3a5c;
+				padding-bottom: 0.4em;
+			}
+			.mart-card p {
+				font-size: 0.82em;
+				color: #4a5568;
+				margin: 0 0 0.75em 0;
+			}
+			.mart-card ul {
+				font-size: 0.8em;
+				color: #1b2a3a;
+				padding-left: 1.1em;
+				margin: 0;
+			}
+			.mart-card ul li { margin-bottom: 0.2em; }
+
+			/* ── Sub-project list ─────────────────────────────────────── */
+			.subproject-item {
+				border-bottom: 1px solid rgba(27, 58, 92, 0.12);
+				padding: 1.25em 0;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 1.5em;
+			}
+			.subproject-item:last-child { border-bottom: none; }
+			.subproject-item h3 { margin: 0 0 0.2em 0; }
+			.subproject-item p { margin: 0 0 0.5em 0; font-size: 0.88em; color: #4a5568; }
+			.badge-wrap { display: flex; flex-wrap: wrap; gap: 0.4em; }
+			.badge {
+				font-size: 0.68em;
+				font-weight: bold;
+				padding: 0.2em 0.65em;
+				border-radius: 2em;
+				background: #1b3a5c;
+				color: #ffffff;
+			}
+			.badge.stat  { background: #1a5c8a; }
+			.badge.or    { background: #1a5c3a; }
+			.badge.math  { background: #5c3a1a; }
+			.badge.soon  { background: #888; }
+		</style>
+	</head>
+	<body>
+
+		<header id="header-slim">
+			<div class="inner">
+				<div>
+					<h1>SOELEMA REMENDA PIEKA</h1>
+					<p class="subtitle">BSc Mathematics &nbsp;·&nbsp; MSc student</p>
+				</div>
+				<nav>
+					<a href="index.html" class="button small">Back to CV</a>
+					<a href="projects.html" class="button small">All Projects</a>
+				</nav>
+			</div>
+		</header>
+
+		<div id="wrapper">
+
+			<!-- Project overview -->
+			<section class="wrapper style1">
+				<div class="inner">
+					<h2>Logistics Operations Analytics Suite</h2>
+					<p>This is a multi-deliverable analytics project built on a public logistics operations dataset, designed to simulate working as a data analyst embedded across multiple departments of a logistics company. The goal is to demonstrate that analytical skills are not limited to one tool or one domain — from SQL data warehousing to Power BI reporting, statistical modelling, and operations research, each sub-project addresses a different business question for a different department.</p>
+					<p>The dataset covers a fictional logistics company operating across the United States, containing 14 relational tables spanning fleet operations, driver performance, customer accounts, route data, fuel purchases, maintenance records, and safety incidents — covering three years of operational data from 2022 to 2024.</p>
+					<p><strong>Data source:</strong> <a href="https://www.kaggle.com/datasets/yogape/logistics-operations-database" target="_blank">Kaggle — Logistics Operations Database</a></p>
+					<div class="project-tags" style="margin-top:0.75em;">
+						<span class="project-tag">SQL Server</span>
+						<span class="project-tag">Power BI</span>
+						<span class="project-tag">Python</span>
+						<span class="project-tag">Data Warehousing</span>
+						<span class="project-tag">Statistics</span>
+						<span class="project-tag">Operations Research</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- Database & Warehouse -->
+			<section class="wrapper style2">
+				<div class="inner">
+					<h2>Database & Warehouse Design</h2>
+					<p>The source data was imported into a relational SQL Server database (OLTP) — 14 tables reflecting the company's day-to-day operational system. Analytical queries on an OLTP database are slow and complex, requiring many joins. A separate analytical warehouse (OLAP) was designed using a star schema, the industry standard for business intelligence. Three data marts were built within the warehouse — one per department — each with its own fact table and a set of surrounding dimension tables.</p>
+					<p>Six conformed dimensions are shared across all marts: <strong>DimDate, DimCustomer, DimRoute, DimDriver, DimSafetyIncident,</strong> and <strong>DimLoad</strong>. Conformed dimensions are defined once and reused across multiple fact tables, ensuring consistent definitions and enabling cross-departmental analysis.</p>
+
+					<div class="mart-grid">
+
+						<div class="mart-card">
+							<h4>MartOperations</h4>
+							<p>Serves the Operations &amp; Fleet department. Answers questions about delivery performance, fleet utilization, and maintenance efficiency.</p>
+							<ul>
+								<li><strong>FactTrip</strong> — one row per trip</li>
+								<li><strong>FactMaintenance</strong> — one row per maintenance event</li>
+								<li>DimTruck, DimTrailer, DimMaintenance</li>
+								<li>+ all conformed dimensions</li>
+							</ul>
+						</div>
+
+						<div class="mart-card">
+							<h4>MartHR</h4>
+							<p>Serves the Human Resources department. Answers questions about driver performance, experience, idle time, and safety records.</p>
+							<ul>
+								<li><strong>FactDriverPerformance</strong> — one row per driver per month</li>
+								<li>DimDriver, DimSafetyIncident</li>
+								<li>+ DimDate</li>
+							</ul>
+						</div>
+
+						<div class="mart-card">
+							<h4>MartFinance</h4>
+							<p>Serves the Finance department. Answers questions about revenue, profitability by route and customer, and the financial impact of incidents.</p>
+							<ul>
+								<li><strong>FactLoad</strong> — one row per load</li>
+								<li>FactSafetyIncident — incident costs</li>
+								<li>DimCustomer, DimRoute, DimLoad</li>
+								<li>+ DimDate</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<!-- SQL Analysis -->
+			<section class="wrapper style1">
+				<div class="inner">
+					<h2>SQL Analysis</h2>
+					<p>Five business queries were written against the warehouse to validate the design and extract initial insights. One query is shown below — the maintenance cost per mile analysis — which joins three tables across two schemas to rank trucks by operational cost efficiency.</p>
+
+					<!-- Featured query -->
+					<h3>Fleet — Maintenance cost per mile by truck</h3>
+					<div class="sql-block">SELECT TOP 10
+    odt.truck_id,
+    SUM(ofm.total_cost) / SUM(oft.actual_distance_miles) AS cost_per_mile
+FROM Operations.FactMaintenance ofm
+JOIN Operations.FactTrip oft ON oft.truck_key = ofm.truck_key
+JOIN Operations.DimTruck odt  ON odt.truck_key = ofm.truck_key
+GROUP BY odt.truck_id
+ORDER BY cost_per_mile DESC;</div>
+
+					<table class="data-table">
+						<tr><th>Truck</th><th>Cost per mile ($)</th></tr>
+						<tr><td>TRK00040</td><td>1.896</td></tr>
+						<tr><td>TRK00095</td><td>1.726</td></tr>
+						<tr><td>TRK00070</td><td>1.722</td></tr>
+						<tr><td>TRK00041</td><td>1.641</td></tr>
+						<tr><td>TRK00038</td><td>1.601</td></tr>
+					</table>
+					<div class="observation">TRK00040 carries the highest maintenance cost per mile at $1.90 — nearly 20% above the next truck. Cross-referencing with truck age and model year would identify whether age is the primary cost driver and inform fleet replacement decisions.</div>
+
+					<hr />
+
+					<!-- Other queries summary -->
+					<h3 style="margin-top:1.5em;">Additional query findings</h3>
+
+					<h3>Operations — Top 10 routes by total revenue</h3>
+					<table class="data-table">
+						<tr><th>Route</th><th>Revenue ($)</th></tr>
+						<tr><td>Philadelphia, PA → Seattle, WA</td><td>10,069,054</td></tr>
+						<tr><td>Charlotte, NC → Portland, OR</td><td>9,979,092</td></tr>
+						<tr><td>Phoenix, AZ → Philadelphia, PA</td><td>9,757,537</td></tr>
+						<tr><td>Columbus, OH → Portland, OR</td><td>9,586,537</td></tr>
+						<tr><td>Seattle, WA → Charlotte, NC</td><td>9,516,078</td></tr>
+					</table>
+					<div class="observation">Long-haul cross-country routes dominate revenue, with the top route generating over $10M across the three-year period. Routes connecting the Pacific Northwest to the East Coast consistently outperform shorter regional lanes.</div>
+
+					<hr />
+
+					<h3 style="margin-top:1.5em;">HR — Top 5 drivers by on-time delivery rate</h3>
+					<table class="data-table">
+						<tr><th>Driver</th><th>On-time rate</th></tr>
+						<tr><td>Jessica Johnson</td><td>50.8%</td></tr>
+						<tr><td>Michael Thomas</td><td>49.1%</td></tr>
+						<tr><td>Mary Williams</td><td>48.9%</td></tr>
+						<tr><td>Jennifer Martinez</td><td>48.3%</td></tr>
+						<tr><td>Joseph Martinez</td><td>48.3%</td></tr>
+					</table>
+					<div class="observation">Even the top-performing drivers have on-time rates below 51%, indicating a systemic delivery performance issue rather than an individual driver problem. This points toward route planning, traffic conditions, or facility detention as the root causes — not driver behaviour.</div>
+
+					<hr />
+
+					<h3 style="margin-top:1.5em;">Finance — Revenue by booking type</h3>
+					<table class="data-table">
+						<tr><th>Booking type</th><th>Revenue ($)</th><th>Share</th></tr>
+						<tr><td>Dedicated</td><td>130,236,635</td><td>49.6%</td></tr>
+						<tr><td>Spot</td><td>66,321,706</td><td>25.3%</td></tr>
+						<tr><td>Contract</td><td>65,967,459</td><td>25.1%</td></tr>
+					</table>
+					<div class="observation">Dedicated loads account for nearly half of all revenue, reflecting the company's reliance on long-term customer relationships. Spot and contract loads contribute almost equally, suggesting a balanced but secondary role for transactional freight.</div>
+
+					<hr />
+
+					<h3 style="margin-top:1.5em;">Safety — Total claim amount by incident type</h3>
+					<table class="data-table">
+						<tr><th>Incident type</th><th>Claims ($)</th><th>Count</th></tr>
+						<tr><td>Equipment Damage</td><td>740,971</td><td>35</td></tr>
+						<tr><td>DOT Violation</td><td>581,447</td><td>39</td></tr>
+						<tr><td>Accident</td><td>487,418</td><td>35</td></tr>
+						<tr><td>Customer Complaint</td><td>432,492</td><td>34</td></tr>
+						<tr><td>Moving Violation</td><td>410,844</td><td>27</td></tr>
+					</table>
+					<div class="observation">Equipment Damage generates the highest total claims despite not being the most frequent incident type, indicating high severity per event. DOT Violations are the most frequent — a compliance risk that carries both financial and reputational consequences.</div>
+
+				</div>
+			</section>
+
+			<!-- Sub-projects -->
+			<section class="wrapper style2">
+				<div class="inner">
+					<h2>Sub-Projects</h2>
+					<p>Each sub-project addresses a specific business question for a specific department, using the warehouse as its data foundation. Click any project to view the full analysis.</p>
+
+					<div style="margin-top:1.5em;">
+
+						<div class="subproject-item">
+							<div>
+								<h3>Operations & Fleet Dashboard</h3>
+								<p>Delivery performance, fleet utilization, maintenance analysis, and route efficiency — the operational view of the business.</p>
+								<div class="badge-wrap">
+									<span class="badge">Power BI</span>
+									<span class="badge">SQL</span>
+									<span class="badge">Operations</span>
+								</div>
+							</div>
+							<a href="project_logistics_operations.html" class="button small">Details</a>
+						</div>
+
+						<div class="subproject-item">
+							<div>
+								<h3>HR & Driver Performance Dashboard</h3>
+								<p>Driver KPIs, on-time rates, experience vs efficiency, idle time analysis, and safety record per driver.</p>
+								<div class="badge-wrap">
+									<span class="badge">Power BI</span>
+									<span class="badge">SQL</span>
+									<span class="badge">HR</span>
+								</div>
+							</div>
+							<a href="project_logistics_hr.html" class="button small">Details</a>
+						</div>
+
+						<div class="subproject-item">
+							<div>
+								<h3>Finance & Revenue Dashboard</h3>
+								<p>Revenue by customer, route, and booking type — profitability analysis, cost breakdown, and spot vs contract comparison.</p>
+								<div class="badge-wrap">
+									<span class="badge">Power BI</span>
+									<span class="badge">SQL</span>
+									<span class="badge">Finance</span>
+								</div>
+							</div>
+							<a href="project_logistics_finance.html" class="button small">Details</a>
+						</div>
+
+						<div class="subproject-item">
+							<div>
+								<h3>C-Suite Dashboard & Monthly Report</h3>
+								<p>Executive monitoring dashboard with KPIs pinned from all three departmental reports, plus a mock October 2023 monthly management report.</p>
+								<div class="badge-wrap">
+									<span class="badge">Power BI</span>
+									<span class="badge soon">Coming soon</span>
+								</div>
+							</div>
+							<a href="project_logistics_csuite.html" class="button small">Details</a>
+						</div>
+
+						<div class="subproject-item">
+							<div>
+								<h3>Predictive Maintenance Model</h3>
+								<p>Regression model predicting unplanned maintenance events. Quantifies the cost difference between reactive and preventive maintenance strategies.</p>
+								<div class="badge-wrap">
+									<span class="badge math">Applied Mathematics</span>
+									<span class="badge soon">Coming soon</span>
+								</div>
+							</div>
+							<a href="project_logistics_maintenance.html" class="button small">Details</a>
+						</div>
+
+						<div class="subproject-item">
+							<div>
+								<h3>Fuel Efficiency Regression</h3>
+								<p>Multiple linear regression identifying which operational factors significantly predict fuel consumption — full model, backward elimination, 95% confidence intervals.</p>
+								<div class="badge-wrap">
+									<span class="badge stat">Statistics</span>
+									<span class="badge soon">Coming soon</span>
+								</div>
+							</div>
+							<a href="project_logistics_fuel.html" class="button small">Details</a>
+						</div>
+
+						<div class="subproject-item">
+							<div>
+								<h3>Route Cost Optimisation</h3>
+								<p>Linear programming model minimising total operational cost of load assignments. Compares optimal solution against actual company performance and quantifies potential savings.</p>
+								<div class="badge-wrap">
+									<span class="badge or">Operations Research</span>
+									<span class="badge soon">Coming soon</span>
+								</div>
+							</div>
+							<a href="project_logistics_routing.html" class="button small">Details</a>
+						</div>
+
+						<div class="subproject-item">
+							<div>
+								<h3>Delivery Bottleneck & Performance</h3>
+								<p>Queuing analysis identifying detention hotspots at facilities, combined with on-time delivery regression to determine which factors most predict delivery performance.</p>
+								<div class="badge-wrap">
+									<span class="badge or">Operations Research</span>
+									<span class="badge soon">Coming soon</span>
+								</div>
+							</div>
+							<a href="project_logistics_bottleneck.html" class="button small">Details</a>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+		</div><!-- end #wrapper -->
+
+		<footer id="footer">
+			<div class="inner" style="text-align: center;">
+				<ul class="menu">
+					<li>&copy; Soelema Pieka. All rights reserved.</li>
+				</ul>
+			</div>
+		</footer>
+
+	</body>
+</html>

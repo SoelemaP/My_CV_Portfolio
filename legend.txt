@@ -1,5 +1,5 @@
 beginner = 30%
-working knowledge = 60%
+intermediate = 60%
 proficient = 75%
 Advanced = 85%
 Expert = 95

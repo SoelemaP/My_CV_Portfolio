@@ -140,8 +140,8 @@
 			<section class="wrapper style1">
 				<div class="inner">
 					<h2>Logistics Operations Analytics Suite</h2>
-					<p>This is a multi-deliverable analytics project that represents the role of a data & BI analyst embedded within a logistics company. The focus is on translating raw operational data into structured, usable insights that directly support business functions.</p>
-					<p>The dataset covers a fictional logistics company operating across the United States, containing 14 relational tables spanning fleet operations, driver performance, customer accounts, route data, fuel purchases, maintenance records, and safety incidents; covering three years of operational data from 2022 to 2024.</p>
+					<p>This is a multi-deliverable analytics project that represents the role of a data & BI analyst embedded within a logistics company. The focus is on an end-to-end data & BI pipeline from SQL data warehousing to executive dashboards, statistical modelling, and operations research.</p>
+					<p>Separate data marts were designed and built for each analytical domain before building departmental reports on top of each.</p>
 					<p><strong>Data source:</strong> <a href="https://www.kaggle.com/datasets/yogape/logistics-operations-database" target="_blank">Kaggle: Logistics Operations Database</a></p>
 					<div class="project-tags" style="margin-top:0.75em;">
 						<span class="project-tag">SQL Server</span>
@@ -161,39 +161,24 @@
 			<section class="wrapper style2">
 				<div class="inner">
 					<h2>Database & Warehouse Design</h2>
-					<p>The source data was imported into a relational SQL Server database (OLTP), 14 tables reflecting the company's day-to-day operational system. Analytical queries on an OLTP database are slow and complex, requiring many joins. A separate analytical warehouse (OLAP) was designed using a star schema, the industry standard for business intelligence. Three data marts were built within the warehouse (one per department), each with its own fact table and a set of surrounding dimension tables.</p>
-					<p>Six conformed dimensions are shared across all marts: <strong>DimDate, DimCustomer, DimRoute, DimDriver, DimSafetyIncident,</strong> and <strong>DimLoad</strong>. Conformed dimensions are defined once and reused across multiple fact tables, ensuring consistent definitions across departments and enabling cross-functional reporting.</p>
+					<p>Starting from the company's operational SQL Server database (OLTP), a separate analytical warehouse (OLAP) was designed using a star schema, the industry standard for business intelligence. Three data marts were built within the warehouse (one per department), each with its own fact table and a set of surrounding dimension tables.</p>
+					<p>Six conformed dimensions were designed, shared across all marts and reused across multiple fact tables, ensuring consistent definitions across departments and enabling cross-functional reporting.</p>
 
 					<div class="mart-grid">
 
 						<div class="mart-card">
 							<h4>Mart Operations</h4>
 							<p>Serves the Operations &amp; Fleet department. Answers questions about delivery performance, fleet utilization, and maintenance efficiency.</p>
-							<ul>
-								<li><strong>FactTrip</strong>: one row per trip</li>
-								<li><strong>FactMaintenance</strong>: one row per maintenance event</li>
-								<li>DimTruck, DimTrailer, DimMaintenance</li>
-								<li>+ all conformed dimensions</li>
-							</ul>
 						</div>
 
 						<div class="mart-card">
 							<h4>Mart HR</h4>
 							<p>Serves the Human Resources department. Answers questions about driver performance, experience, idle time, and safety records.</p>
-							<ul>
-								<li><strong>FactDriverPerformance</strong>: one row per driver per month</li>
-								<li>+ DimDate, DimDriver, DimSafetyIncident</li>
-							</ul>
 						</div>
 
 						<div class="mart-card">
 							<h4>Mart Finance</h4>
 							<p>Serves the Finance department. Answers questions about revenue, profitability by route and customer, and the financial impact of incidents.</p>
-							<ul>
-								<li><strong>FactLoad</strong>: one row per load</li>
-								<li>FactSafetyIncident: incident costs</li>
-								<li>+ DimDate, DimCustomer, DimRoute, DimLoad</li>
-							</ul>
 						</div>
 
 					</div>

@@ -140,7 +140,7 @@
 			<section class="wrapper style1">
 				<div class="inner">
 					<h2>Logistics Operations Analytics Suite</h2>
-					<p>This is a multi-deliverable analytics project built on a public logistics operations dataset, designed to simulate working as a data & BI analyst embedded across multiple departments of a logistics company. The goal is to demonstrate that analytical skills are not limited to one tool or one domain. From SQL data warehousing to Power BI reporting, statistical modelling, and operations research, each sub-project addresses a different business question for a different department.</p>
+					<p>This is a multi-deliverable analytics project that simulates the role of a data & BI analyst embedded within a logistics company. The focus is on translating raw operational data into structured, usable insights that directly support business functions.</p>
 					<p>The dataset covers a fictional logistics company operating across the United States, containing 14 relational tables spanning fleet operations, driver performance, customer accounts, route data, fuel purchases, maintenance records, and safety incidents; covering three years of operational data from 2022 to 2024.</p>
 					<p><strong>Data source:</strong> <a href="https://www.kaggle.com/datasets/yogape/logistics-operations-database" target="_blank">Kaggle: Logistics Operations Database</a></p>
 					<div class="project-tags" style="margin-top:0.75em;">
@@ -159,7 +159,7 @@
 				<div class="inner">
 					<h2>Database & Warehouse Design</h2>
 					<p>The source data was imported into a relational SQL Server database (OLTP), 14 tables reflecting the company's day-to-day operational system. Analytical queries on an OLTP database are slow and complex, requiring many joins. A separate analytical warehouse (OLAP) was designed using a star schema, the industry standard for business intelligence. Three data marts were built within the warehouse (one per department), each with its own fact table and a set of surrounding dimension tables.</p>
-					<p>Six conformed dimensions are shared across all marts: <strong>DimDate, DimCustomer, DimRoute, DimDriver, DimSafetyIncident,</strong> and <strong>DimLoad</strong>. Conformed dimensions are defined once and reused across multiple fact tables, ensuring consistent definitions and enabling cross-departmental analysis.</p>
+					<p>Six conformed dimensions are shared across all marts: <strong>DimDate, DimCustomer, DimRoute, DimDriver, DimSafetyIncident,</strong> and <strong>DimLoad</strong>. Conformed dimensions are defined once and reused across multiple fact tables, ensuring consistent definitions across departments and enabling cross-functional reporting.</p>
 
 					<div class="mart-grid">
 
@@ -296,7 +296,7 @@ ORDER BY cost_per_mile DESC;</div>
 									<span class="badge">Power BI</span>
 									<span class="badge">SQL</span>
 									<span class="badge">Operations</span>
-									<span class="badge soon">In progress</span>
+									<span class="badge soon">In progress (architecture complete, dashboard develompent ongoing)</span>
 								</div>
 							</div>
 						<!--	<a href="project_logistics_operations.html" class="button small">Details</a> -->
@@ -310,7 +310,7 @@ ORDER BY cost_per_mile DESC;</div>
 									<span class="badge">Power BI</span>
 									<span class="badge">SQL</span>
 									<span class="badge">HR</span>
-									<span class="badge soon">Coming soon</span>
+									<span class="badge soon">In development</span>
 								</div>
 							</div>
 						<!--	<a href="project_logistics_hr.html" class="button small">Details</a> -->
@@ -324,7 +324,7 @@ ORDER BY cost_per_mile DESC;</div>
 									<span class="badge">Power BI</span>
 									<span class="badge">SQL</span>
 									<span class="badge">Finance</span>
-									<span class="badge soon">Coming soon</span>
+									<span class="badge soon">In development</span>
 								</div>
 							</div>
 						<!--	<a href="project_logistics_finance.html" class="button small">Details</a> -->
@@ -336,7 +336,7 @@ ORDER BY cost_per_mile DESC;</div>
 								<p>Executive monitoring dashboard with KPIs pinned from all three departmental reports, plus a mock October 2023 monthly management report.</p>
 								<div class="badge-wrap">
 									<span class="badge">Power BI</span>
-									<span class="badge soon">Coming soon</span>
+									<span class="badge soon">In development</span>
 								</div>
 							</div>
 						<!--	<a href="project_logistics_csuite.html" class="button small">Details</a> -->
@@ -348,7 +348,7 @@ ORDER BY cost_per_mile DESC;</div>
 								<p>Regression model predicting unplanned maintenance events. Quantifies the cost difference between reactive and preventive maintenance strategies.</p>
 								<div class="badge-wrap">
 									<span class="badge math">Applied Mathematics</span>
-									<span class="badge soon">Coming soon</span>
+									<span class="badge soon">In development</span>
 								</div>
 							</div>
 						<!--	<a href="project_logistics_maintenance.html" class="button small">Details</a> -->
@@ -360,7 +360,7 @@ ORDER BY cost_per_mile DESC;</div>
 								<p>Multiple linear regression identifying which operational factors significantly predict fuel consumption. Full model, backward elimination, 95% confidence intervals.</p>
 								<div class="badge-wrap">
 									<span class="badge stat">Statistics</span>
-									<span class="badge soon">Coming soon</span>
+									<span class="badge soon">In development</span>
 								</div>
 							</div>
 						<!--	<a href="project_logistics_fuel.html" class="button small">Details</a> -->
@@ -372,7 +372,7 @@ ORDER BY cost_per_mile DESC;</div>
 								<p>Linear programming model minimising the total operational cost of load assignments. Compares optimal solution against actual company performance and quantifies potential savings.</p>
 								<div class="badge-wrap">
 									<span class="badge or">Operations Research</span>
-									<span class="badge soon">Coming soon</span>
+									<span class="badge soon">In development</span>
 								</div>
 							</div>
 						<!--	<a href="project_logistics_routing.html" class="button small">Details</a> -->
@@ -384,7 +384,7 @@ ORDER BY cost_per_mile DESC;</div>
 								<p>Queuing analysis identifying detention hotspots at facilities, combined with on-time delivery regression to determine which factors most predict delivery performance.</p>
 								<div class="badge-wrap">
 									<span class="badge or">Operations Research</span>
-									<span class="badge soon">Coming soon</span>
+									<span class="badge soon">In development</span>
 								</div>
 							</div>
 						<!--	<a href="project_logistics_bottleneck.html" class="button small">Details</a> -->

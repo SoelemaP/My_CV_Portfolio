@@ -1,11 +1,82 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Operations & Fleet Dashboard - Logistics Operations Analytics Suite | Soelema Pieka</title>
+		<title>Operations & Fleet Dashboard | Soelema Pieka</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="main.css" />
 
+		<style>
+			.finding-block {
+				border-bottom: 1px solid rgba(27, 58, 92, 0.12);
+				padding: 1em 0;
+			}
+			.finding-block:last-child { border-bottom: none; }
+			.finding-block h4 {
+				font-size: 0.9em;
+				font-weight: bold;
+				color: #1b2a3a;
+				margin: 0 0 0.3em 0;
+			}
+			.finding-block p {
+				font-size: 0.85em;
+				color: #4a5568;
+				margin: 0;
+			}
+			.finding-number {
+				display: inline-block;
+				background: #1b3a5c;
+				color: #ffffff;
+				font-size: 0.75em;
+				font-weight: bold;
+				width: 1.6em;
+				height: 1.6em;
+				line-height: 1.6em;
+				text-align: center;
+				border-radius: 50%;
+				margin-right: 0.5em;
+				flex-shrink: 0;
+			}
+			.finding-row {
+				display: flex;
+				align-items: flex-start;
+				gap: 0.5em;
+			}
+			.rec-block {
+				border-left: 3px solid #1b3a5c;
+				padding: 0.6em 1em;
+				margin-bottom: 0.75em;
+				background: rgba(27, 58, 92, 0.04);
+				border-radius: 0 4px 4px 0;
+				font-size: 0.85em;
+				color: #1b2a3a;
+			}
+			.rec-block:last-child { margin-bottom: 0; }
+			.kpi-row {
+				display: grid;
+				grid-template-columns: repeat(5, 1fr);
+				gap: 1em;
+				margin-top: 1em;
+			}
+			.kpi-card {
+				background: #1b3a5c;
+				border-radius: 6px;
+				padding: 1em;
+				text-align: center;
+			}
+			.kpi-card .kpi-value {
+				font-size: 1.3em;
+				font-weight: bold;
+				color: #ffffff;
+				margin: 0 0 0.2em 0;
+			}
+			.kpi-card .kpi-label {
+				font-size: 0.72em;
+				color: rgba(255, 255, 255, 0.7);
+			}
+		</style>
+
+		
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YC6REWM0DP"></script>
 <script>
@@ -14,9 +85,9 @@
   gtag('js', new Date());
 
   gtag('config', 'G-YC6REWM0DP');
-</script>
-		
+</script>	
 	</head>
+	
 	<body>
 
 		<header id="header-slim">
@@ -26,7 +97,7 @@
 					<p class="subtitle">BSc Mathematics &nbsp;·&nbsp; MSc student</p>
 				</div>
 				<nav>
-					<a href="index.html" class="button small">Back to CV</a>
+					<a href="project_logistics_main.html" class="button small">Back to Suite</a>
 					<a href="projects.html" class="button small">All Projects</a>
 				</nav>
 			</div>
@@ -37,23 +108,55 @@
 			<!-- Intro -->
 			<section class="wrapper style1">
 				<div class="inner">
-					<h2>Customer Purchase Behavior & Lead Generation Dashboard</h2>
-					<p>An end-to-end business intelligence project analyzing customer purchasing behavior to identify high-value sales leads. From demographic overviews to an actionable Top 20 Lead List designed to optimize marketing investments and improve conversion rates.</p>
+					<h2>Operations & Fleet Dashboard</h2>
+					<p>Part of the <a href="project_logistics_main.html">Logistics Operations Analytics Suite</a>. This report addresses the core operational question facing any logistics company: are we moving freight efficiently, and are our assets performing as expected? It covers delivery performance, fleet utilization, maintenance cost analysis, and customer revenue — built on top of the Operations data mart in the LogisticsWarehouse SQL Server database.</p>
+					<p>The report covers January through October 2024 as the reporting period, reflecting a realistic year-to-date executive view.</p>
 					<div class="project-tags" style="margin-top: 0.5em;">
 						<span class="project-tag">Power BI</span>
 						<span class="project-tag">DAX</span>
-						<span class="project-tag">Excel</span>
-						<span class="project-tag">Data Segmentation</span>
+						<span class="project-tag">Operations</span>
 					</div>
 				</div>
 			</section>
 
-			<!-- Live dashboard -->
+			<!-- KPI snapshot -->
 			<section class="wrapper style2">
 				<div class="inner">
+					<h2>Performance Snapshot — YTD October 2024</h2>
+					<div class="kpi-row">
+						<div class="kpi-card">
+							<div class="kpi-value">$73.29M</div>
+							<div class="kpi-label">Total Revenue</div>
+						</div>
+						<div class="kpi-card">
+							<div class="kpi-value">23,946</div>
+							<div class="kpi-label">Total Trips</div>
+						</div>
+						<div class="kpi-card">
+							<div class="kpi-value">92</div>
+							<div class="kpi-label">Active Trucks</div>
+						</div>
+						<div class="kpi-card">
+							<div class="kpi-value">$1.51M</div>
+							<div class="kpi-label">Maintenance Cost</div>
+						</div>
+						<div class="kpi-card">
+							<div class="kpi-value">$719.71K</div>
+							<div class="kpi-label">Total Claims</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			
+			<!-- Live dashboard -->
+			<section class="wrapper style1">
+				<div class="inner">
+					<h2>Interactive Report</h2>
+					<p>Use the navigation tabs at the bottom to move between pages. Filter by year, month, customer, or freight type using the filter panel on each page.</p>
 					<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
 						<iframe
-							title="PowerBI_bikers_analytics"
+							title="Operations & Fleet Dashboard"
 							width="100%" height="500"
 							src="https://app.powerbi.com/view?r=eyJrIjoiZTI3ZDQyMDktZGU0Yi00YTllLWI2MWMtYmE3NDY1ZTI1N2ViIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9"
 							frameborder="0" allowFullScreen="true">
@@ -62,16 +165,21 @@
 				</div>
 			</section>
 
-			<!-- Project description -->
-			<section class="wrapper style1">
+			<!-- Key findings -->
+			<section class="wrapper style2">
 				<div class="inner">
-					<h2>Project Description</h2>
-
-					<h3>The Problem</h3>
-					<p>The company faced low sales and an inefficient marketing strategy. Without a clear understanding of their ideal customer profile, the sales team could not prioritize leads, leading to wasted resources. The core challenge was: where should the company invest its next marketing campaign for the highest ROI?</p>
-
-					<h3>The Solution</h3>
-					<p>A multi-page interactive Power BI dashboard that transformed raw Excel data into a strategic roadmap. Using segmentation logic and filtering criteria based on demographic and behavioral variables, the model identified high-potential non-buyers, culminating in a targeted Top 20 Lead List. This analysis enables the company to focus marketing efforts on high-probability leads, improving ROI and reducing wasted spend.</p>
+					<h2>Interactive Report</h2>
+					<p>Use the navigation tabs at the bottom to move between pages. Filter by year, month, customer, or freight type using the filter panel on each page.</p>
+					<div style="margin-top:1em;">
+						<iframe
+							title="Operations & Fleet Dashboard"
+							width="100%"
+							height="600"
+							src="https://app.powerbi.com/view?r=eyJrIjoiZTI3ZDQyMDktZGU0Yi00YTllLWI2MWMtYmE3NDY1ZTI1N2ViIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9"
+							frameborder="0"
+							allowFullScreen="true">
+						</iframe>
+					</div>
 				</div>
 			</section>
 
@@ -79,24 +187,85 @@
 			<section class="wrapper style2">
 				<div class="inner">
 					<h2>Key Findings</h2>
-					<ul>
-						<li><strong>Lifestyle triggers</strong>; homeownership and short commute distances (0–1 miles) are the strongest predictors of purchase intent.</li>
-						<li><strong>Friction points</strong>; high car ownership (3+ vehicles) and long commutes significantly decrease the likelihood of a bike purchase.</li>
-						<li><strong>Target demographics</strong>; the "Middle Aged" and "Adult" segments with 0–2 cars show the most consistent conversion rates.</li>
-						<li><strong>Geographic opportunity</strong>; the Pacific and North American regions hold the highest concentration of high-income non-buyers, representing the best growth markets.</li>
-					</ul>
+
+					<div class="finding-block">
+						<div class="finding-row">
+							<span class="finding-number">1</span>
+							<div>
+								<h4>Premium pricing drives top route performance</h4>
+								<p>Phoenix AZ → Philadelphia PA is the highest revenue route at $2.87M YTD, despite not ranking in the top routes by trip volume. This suggests premium per-load pricing on this lane rather than high frequency — a margin-efficient route worth protecting and expanding.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="finding-block">
+						<div class="finding-row">
+							<span class="finding-number">2</span>
+							<div>
+								<h4>2018 model year trucks carry the highest maintenance cost per mile</h4>
+								<p>Despite not being the oldest trucks in the fleet, 2018 trucks show the highest average maintenance cost per mile. This non-linear relationship between age and maintenance cost suggests a specific model or mechanical issue with that year's cohort rather than simple age-related wear.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="finding-block">
+						<div class="finding-row">
+							<span class="finding-number">3</span>
+							<div>
+								<h4>Three trucks are consistently underperforming</h4>
+								<p>TRK00073, TRK00088, and TRK00044 appear in both the top maintenance cost ranking and the top downtime ranking. This pattern indicates chronic underperformance — these trucks are generating disproportionate cost while simultaneously reducing operational capacity through extended downtime.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="finding-block">
+						<div class="finding-row">
+							<span class="finding-number">4</span>
+							<div>
+								<h4>Customer revenue is heavily concentrated</h4>
+								<p>First Group is the top customer at $2.62M — 41% above the second highest customer. While this reflects a strong account relationship, significant revenue concentration in a single customer introduces risk if that account reduces volume or transitions to a competitor.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="finding-block">
+						<div class="finding-row">
+							<span class="finding-number">5</span>
+							<div>
+								<h4>Automotive and Food/Beverage dominate freight revenue</h4>
+								<p>Automotive freight generates $15.1M and Food/Beverage $13.7M — together accounting for 39% of total revenue. These two freight types represent the company's core business and anchor its operational capacity planning.</p>
+							</div>
+						</div>
+					</div>
+
 				</div>
 			</section>
 
-			<!-- Future growth -->
+			<!-- Recommendations -->
 			<section class="wrapper style1">
 				<div class="inner">
-					<h2>Future Growth</h2>
-					<ul>
-						<li><strong>Time-series analysis</strong>; integrating historical sales dates to identify seasonal buying trends.</li>
-						<li><strong>Predictive modeling</strong>; using the identified triggers to build a machine learning model that scores new leads as High, Medium, or Low priority.</li>
-						<li><strong>CRM integration</strong>; automating the Top 20 list to refresh daily, and enabling faster, data-driven decision making.</li>
-					</ul>
+					<h2>Recommendations</h2>
+
+					<div class="rec-block">
+						<strong>Prioritise the Phoenix → Philadelphia and Charlotte → Portland lanes</strong> for capacity investment. Both combine high revenue with strong per-load margins. Adding frequency or dedicated capacity on these routes would yield the highest return on operational investment.
+					</div>
+
+					<div class="rec-block">
+						<strong>Evaluate TRK00073, TRK00088, and TRK00044 for early retirement or major overhaul.</strong> The combination of high maintenance cost and high downtime makes these trucks net-negative contributors to fleet efficiency. A cost-benefit analysis comparing overhaul cost against replacement cost should be conducted before the next maintenance cycle.
+					</div>
+
+					<div class="rec-block">
+						<strong>Investigate 2018 model year trucks as a cohort.</strong> The elevated maintenance cost per mile is unlikely to be coincidental. Cross-referencing make and model within that year group may reveal a specific mechanical pattern — and inform future procurement decisions to avoid repeating the issue.
+					</div>
+
+					<div class="rec-block">
+						<strong>Reduce customer revenue concentration risk.</strong> With First Group accounting for a disproportionate share of revenue, the company should actively develop the next tier of customers — particularly those in the $1.1M–$1.5M range — to build a more resilient revenue base.
+					</div>
+
+					<div class="rec-block">
+						<strong>Strengthen capacity in Automotive and Food/Beverage freight.</strong> As the two dominant freight types, any capacity constraints in these segments would disproportionately impact total revenue. Ensuring sufficient refrigerated and flatbed trailer availability for these freight types should be a fleet planning priority.
+					</div>
+
 				</div>
 			</section>
 

@@ -64,7 +64,8 @@
 			<section class="wrapper style1">
 				<div class="inner">
 					<h2>HR & Driver Performance Dashboard</h2>
-					<p>Part of the <a href="project_logistics_main.html">Logistics Operations Analytics Suite</a>. This report addresses the core operational question facing any logistics company: are we moving goods efficiently, and are our trucks performing as expected? It covers delivery performance, fleet utilization, maintenance cost analysis, and customer revenue. It is built on top of the Operations data mart in the LogisticsWarehouse SQL Server database.</p>
+					<p>Part of the <a href="project_logistics_main.html">Logistics Operations Analytics Suite</a>. This report addresses the people side of logistics operations: Are our drivers performing efficiently? Where are the safety risks, and are they preventable?
+				       It covers on-time delivery rates, revenue per driver, and incident analysis. It is built on top of the HR data mart in the LogisticsWarehouse SQL Server database.</p>
 					<p>The report covers January through October 2024 as the reporting period, reflecting a realistic year-to-date executive view.</p>
 					<div class="project-tags" style="margin-top: 0.5em;">
 						<span class="project-tag">Power BI</span>
@@ -80,20 +81,20 @@
 					<h2>Performance Snapshot YTD October 2024</h2>
 					<div class="kpi-row">
 						<div class="kpi-card">
-							<div class="kpi-value">$73.29M</div>
-							<div class="kpi-label">Total Revenue</div>
+							<div class="kpi-value">124</div>
+							<div class="kpi-label">Active Drivers</div>
 						</div>
 						<div class="kpi-card">
-							<div class="kpi-value">23,946</div>
-							<div class="kpi-label">Total Trips</div>
+							<div class="kpi-value">45%</div>
+							<div class="kpi-label">Avg On-Time Rate</div>
 						</div>
 						<div class="kpi-card">
-							<div class="kpi-value">92</div>
-							<div class="kpi-label">Active Trucks</div>
+							<div class="kpi-value">49</div>
+							<div class="kpi-label">Total Incidents</div>
 						</div>
 						<div class="kpi-card">
-							<div class="kpi-value">$1.51M</div>
-							<div class="kpi-label">Maintenance Cost</div>
+							<div class="kpi-value">41%</div>
+							<div class="kpi-label">Preventable Incident Rate</div>
 						</div>
 						<div class="kpi-card">
 							<div class="kpi-value">$719.71K</div>
@@ -113,7 +114,7 @@
 						Use the filter panel on each page to explore previous years and months.</p>
 					<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
 						<iframe
-							title="Operations & Fleet Dashboard"
+							title="HR & Driver Performance Dashboard."
 							width="100%" height="500"
 							src="https://app.powerbi.com/view?r=eyJrIjoiMjk3ZjJkOTYtZDc2YS00NmNkLTlhZjMtOThjN2Q4NDAxZTczIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9"
 							frameborder="0" allowFullScreen="true">
@@ -128,29 +129,30 @@
 					<h2>Key Findings</h2>
 
 					<ul>
-						<li><strong>Higher pricing drives top route performance</strong>
-						<p>Phoenix, AZ → Philadelphia, PA is the highest revenue route at $2.87M YTD, despite not ranking in the top routes by trip volume. 
-							This suggests higher pricing per load on the route rather than high frequency. This appears to be a margin-efficient route worth protecting and expanding.</p>
+						<li><strong>On-time performance is a company-wide issue, not a driver issue</strong>
+						<p>The average on-time rate is 44.71 %, with even the top performers not exceeding 51%. 
+							The consistency of low rates across all 124 drivers points to systemic causes such as route planning or traffic conditions rather than individual driver behaviour.</p>
 						</li>
 
-						<li><strong>2018 model year trucks carry the highest maintenance cost per mile</strong>
-						<p>Despite not being the oldest trucks in the fleet, the 2018 trucks show the highest average maintenance cost per mile. 
-							This non-linear relationship between age and maintenance cost suggests a specific model or mechanical issue with that year's cohort rather than simple age-related wear.</p>
+						<li><strong>Preventable incidents represent a significant and addressable cost</strong>
+						<p>Out of all incidents, 41% (20) were preventable, accounting for $263K in claims. 
+							Of those, only 4 incidents were also at fault, generating %72K in claims. 
+							This distinction is important: most preventable incidents occurred without driver fault, suggesting procedural or environmental factors rather than driver negligence.</p>
 						</li>
 
-						<li><strong>Three trucks are consistently underperforming</strong>
-						<p>TRK00073, TRK00088, and TRK00044 appear in both the top maintenance cost ranking and the top downtime ranking.
-							This pattern indicates chronic underperformance; these trucks are generating disproportionate costs while simultaneously reducing operational capacity through extended downtime.</p>
+						<li><strong>Equipment Damage is the highest-cost incident</strong>
+						<p>Despite not being the most frequent incident, equipment damage is the highest-cost incident with $226K in claims.
+							Equipment Damage occurs less often than accidents but generates higher total claims, meaning each event carries a significantly higher financial cost.</p>
 						</li>
 
-						<li><strong>Customer revenue is heavily concentrated</strong>
-						<p>First Group is the top customer at $2.62M, which is 41% above the second-highest customer. This pattern is also visible in previous years.
-							While this reflects a strong account relationship, significant revenue concentration in a single customer introduces risk if that account reduces volume or transitions to a competitor.</p>
+						<li><strong>The safety risk is distributed across the workforce </strong>
+						<p>No single driver dominates the incident count. 
+							Davis Anderson and Jennifer Wilson lead with 3 incidents each, indicating the safety challenge is broad rather than concentrated in a small group of high-risk drivers.</p>
 						</li>
 
-						<li><strong>Automotive and Food/Beverage dominate freight revenue</strong>
-						<p>Automotive freight generates $15.1M and Food/Beverage $13.7M, together accounting for 39% of total revenue.
-							These two freight types represent the company's core business and anchor its operational capacity planning.</p>
+						<li><strong>The workforce is experienced and stable</strong>
+						<p>The workforce is stable with an average age of 45, average experience of 13 years, and average tenure of 7.4 years.
+							This reduces short-term performance risk but raises succession planning concerns as a significant portion of the workforce approaches retirement age.</p>
 						</li>
 						
 					</ul>
@@ -164,27 +166,29 @@
 					<h2>Recommendations</h2>
 					<ul> 
 
-						<li><strong>Prioritise the Phoenix → Philadelphia and Charlotte → Portland routes for capacity investment.</strong> 
-							<p>Both combine high revenue with strong margins per load. 
-								Adding frequency or dedicated capacity on these routes would yield the highest return on investment.</p>
+						<li><strong>Investigate systemic causes of low on-time delivery rates.</strong> 
+							<p>Since all drivers perform similarly, the root cause is unlikely to be driver-related.
+								A focused analysis of facility detention times, route scheduling, and traffic patterns (particularly during the low-performing months, March and September)
+								would identify where the breakdown occurs.</p>
 						</li>
 						
-						<li><strong>Evaluate TRK00073, TRK00088, and TRK00044 for early retirement or major overhaul.</strong> 
-							<p>The combination of high maintenance costs and high downtime makes these trucks net-negative contributors to fleet efficiency. 
-								A cost-benefit analysis comparing overhaul costs against replacement costs should be conducted before the next maintenance cycle.</p>
+						<li><strong>Implement a preventable incident reduction programme.</strong> 
+							<p>Since 16 out of 20 preventable incidents occurred without driver faults, the focus should be on operational procedures and environmental conditions rather than driver discipline.
+								A review of equipment inspection and facility conditions at the highest-indicent locations would be the logical starting point.</p>
 						</li>
 						
-						<li><strong>Investigate 2018 model year trucks as a cohort.</strong> 
-							<p>The elevated maintenance cost per mile is unlikely to be coincidental. 
-								Cross-referencing makes and models within that year group may reveal a specific mechanical pattern and inform future procurement decisions to avoid repeating the issue.</p>
+						<li><strong>Prioritise equipment inspection and maintenance for damage prevention.</strong> 
+							<p>Equipment damage generates the highest claim costs per incident. 
+								A structured pre-trip and post-trip inspection protocol, combined with more frequent equipment servicing, would directly target the costliest incident category.</p>
 						</li>
-						<li><strong>Reduce customer revenue concentration risk.</strong> 
-							<p>With First Group accounting for a large share of revenue, the company should actively develop the next tier of customers, particularly those in the $1.1M–$1.5M range, to build a more resilient revenue base.</p>
+						<li><strong>Monitor the 4 at-fault preventable incidents closely.</strong> 
+							<p>While $72K represents a relatively small share of total claims, at-fault preventable incidents carry reputational and legal risks beyond the financial cost.
+								The 4 cases warrant individual review to determine whether additional driver training or procedural changes are needed.</p>
 						</li>
 						
-						<li><strong>Strengthen capacity in Automotive and Food/Beverage freight.</strong> 
-							<p>As the two dominant freight types, any capacity constraints in these segments would impact total revenue. 
-								Ensuring sufficient refrigerated and flatbed trailer availability for these freight types should be a fleet planning priority.</p>
+						<li><strong>Begin succession planning for the driver workforce.</strong> 
+							<p>With an average age of 45 and average tenure of 7.4 years, a meaningful share of the workforce will reach retirement age within the next decade.
+								Building a structured recruitment and onboarding pipeline now, before the pressure becomes higher, will protect operational capacity and preserve institutional knowledge.</p>
 						</li>
 
    					</ul>
